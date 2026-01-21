@@ -4,644 +4,1152 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>BeachViewStays.pk | Premium 1-Bedroom Serviced Apartments in DHA Karachi</title>
-  <meta name="description" content="Relax. Stay. Enjoy the View. Premium serviced 1-bedroom apartments near the beach in DHA Karachi—fully furnished, family & tourist friendly, secure, spotless, with high-speed Wi-Fi, AC, smart TV, kitchenette, and housekeeping support." />
-  <link rel="canonical" href="https://beachviewstays.pk" />
+  <!-- SEO -->
+  <title>Beach View Stays | Premium Serviced Apartments in DHA Karachi</title>
+  <meta name="description" content="Relax. Stay. Enjoy the View. Beach View Stays offers premium serviced 1-bedroom apartments near the beach in DHA Karachi—secure, family-friendly, fully furnished, Wi-Fi, housekeeping, and short stays." />
+  <link rel="canonical" href="https://beachviewstays.pk/" />
+  <meta name="robots" content="index,follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="BeachViewStays.pk" />
-  <meta property="og:title" content="BeachViewStays.pk | Relax. Stay. Enjoy the View." />
-  <meta property="og:description" content="Premium serviced 1-bedroom apartments near the beach in DHA Karachi. Fully furnished, family & tourist friendly, secure & peaceful, with high-speed Wi-Fi and housekeeping support." />
-  <meta property="og:url" content="https://beachviewstays.pk" />
-  <!-- Optional: add when you have a real image -->
-  <!-- <meta property="og:image" content="https://beachviewstays.pk/og-cover.jpg" /> -->
+  <meta property="og:title" content="Beach View Stays | Premium Serviced Apartments in DHA Karachi" />
+  <meta property="og:description" content="Premium serviced 1-bedroom apartments near the beach in DHA Karachi—comfort, privacy, and hotel-level cleanliness. Book instantly on WhatsApp." />
+  <meta property="og:url" content="https://beachviewstays.pk/" />
+  <meta property="og:image" content="https://beachviewstays.pk/og-home.jpg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="BeachViewStays.pk | Relax. Stay. Enjoy the View." />
-  <meta name="twitter:description" content="Premium serviced 1-bedroom apartments near the beach in DHA Karachi—fully furnished, secure & peaceful, with high-speed Wi-Fi and housekeeping support." />
-  <!-- Optional: add when you have a real image -->
-  <!-- <meta name="twitter:image" content="https://beachviewstays.pk/og-cover.jpg" /> -->
+  <meta name="twitter:title" content="Beach View Stays | Premium Serviced Apartments in DHA Karachi" />
+  <meta name="twitter:description" content="Premium serviced 1-bedroom apartments near the beach in DHA Karachi. Book instantly on WhatsApp." />
+  <meta name="twitter:image" content="https://beachviewstays.pk/og-home.jpg" />
 
-  <!-- JSON-LD: LodgingBusiness (no check-in/out times) -->
+  <meta name="theme-color" content="#0B1F2A" />
+
+  <style>
+    :root{
+      /* Coastal Luxury (hospitality) */
+      --navy:#0B1F2A;
+      --teal:#0E6F6D;
+      --gold:#C9A24E;
+
+      --bg:#F6F2EA;
+      --surface:#FFFFFF;
+      --border:#E7DDCF;
+
+      --text:#101828;
+      --muted:#475467;
+
+      --shadow: 0 18px 45px rgba(11,31,42,.10);
+      --shadow-soft: 0 10px 26px rgba(11,31,42,.08);
+
+      --radius: 18px;
+      --radius-lg: 26px;
+
+      --container: 1100px;
+      --ease: cubic-bezier(.2,.8,.2,1);
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: var(--bg);
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      overflow-x:hidden;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    img{ max-width:100%; height:auto; display:block; }
+    .container{ width:min(var(--container), calc(100% - 40px)); margin-inline:auto; }
+
+    /* Subtle background atmosphere */
+    body:before{
+      content:"";
+      position:fixed; inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(201,162,78,.10), transparent 45%),
+        radial-gradient(circle at 85% 18%, rgba(14,111,109,.08), transparent 45%),
+        radial-gradient(circle at 55% 110%, rgba(11,31,42,.10), transparent 55%);
+      opacity:.9;
+      z-index:-1;
+    }
+
+    /* Header / Nav */
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(246,242,234,.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(231,221,207,.85);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:10px 0; /* tighter */
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width:0;
+    }
+    .logoMark{
+      width:38px; height:38px; border-radius:14px;
+      background: radial-gradient(circle at 30% 30%, rgba(201,162,78,.35), transparent 55%),
+                  linear-gradient(135deg, var(--navy), #153748);
+      box-shadow: 0 14px 30px rgba(11,31,42,.18);
+      border: 1px solid rgba(255,255,255,.22);
+      position:relative;
+      overflow:hidden;
+      flex:0 0 auto;
+    }
+    .logoMark:after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: radial-gradient(circle, rgba(255,255,255,.25), transparent 60%);
+      transform: rotate(25deg);
+    }
+    .brand strong{ display:block; letter-spacing:.2px; }
+    .brand span{ display:block; font-size:12.5px; color:var(--muted); margin-top:1px; }
+
+    nav ul{
+      display:flex; align-items:center; gap:18px;
+      list-style:none; padding:0; margin:0;
+    }
+    nav a{
+      font-weight:800;
+      color: rgba(16,24,40,.9);
+      padding:8px 10px;
+      border-radius:999px;
+      transition: background .2s var(--ease), transform .2s var(--ease);
+    }
+    nav a:hover{
+      background: rgba(14,111,109,.08);
+      transform: translateY(-1px);
+    }
+
+    .navRight{ display:flex; align-items:center; gap:10px; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:11px 14px;
+      border-radius:999px;
+      font-weight:900;
+      border:1px solid transparent;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
+      will-change: transform;
+      white-space:nowrap;
+      position:relative;
+      overflow:hidden;
+    }
+    .btn:focus{ outline: 3px solid rgba(14,111,109,.18); outline-offset: 2px; }
+
+    /* Button shine effect */
+    .btn:before{
+      content:"";
+      position:absolute;
+      top:-60%;
+      left:-40%;
+      width:40%;
+      height:220%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+      transform: rotate(20deg) translateX(-120%);
+      transition: transform .6s var(--ease);
+      pointer-events:none;
+    }
+    .btn:hover:before{ transform: rotate(20deg) translateX(420%); }
+
+    .btnPrimary{
+      background: linear-gradient(135deg, var(--navy), #143242);
+      color:#fff;
+      box-shadow: 0 14px 30px rgba(11,31,42,.16);
+    }
+    .btnPrimary:hover{ transform: translateY(-1px); box-shadow: 0 18px 40px rgba(11,31,42,.22); }
+
+    .btnOutline{
+      background: rgba(255,255,255,.72);
+      border-color: rgba(231,221,207,.95);
+      color: var(--navy);
+      box-shadow: 0 10px 24px rgba(11,31,42,.08);
+    }
+    .btnOutline:hover{ transform: translateY(-1px); box-shadow: 0 14px 30px rgba(11,31,42,.12); }
+
+    .btnWhatsapp{
+      background: linear-gradient(135deg, rgba(201,162,78,.26), rgba(201,162,78,.12));
+      border-color: rgba(201,162,78,.32);
+      color: var(--navy);
+      box-shadow: 0 10px 24px rgba(11,31,42,.08);
+    }
+    .btnWhatsapp:hover{ transform: translateY(-1px); box-shadow: 0 16px 34px rgba(11,31,42,.12); }
+
+    .icon{ width:18px; height:18px; flex:0 0 auto; }
+
+    /* Mobile menu button */
+    .menuBtn{
+      display:none;
+      width:44px; height:44px;
+      border-radius:14px;
+      border:1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.74);
+      align-items:center; justify-content:center;
+      box-shadow: 0 10px 24px rgba(11,31,42,.08);
+      transition: transform .25s var(--ease);
+    }
+    .menuBtn:hover{ transform: translateY(-1px); }
+    .menuBtn svg{ width:20px; height:20px; }
+
+    /* Mobile menu (NO layout gap when closed) */
+    .mobilePanel{
+      display:none;   /* hidden on desktop */
+      padding:0;
+      margin:0;
+    }
+    @media (max-width: 860px){
+      .mobilePanel{ display:block; }
+    }
+
+    .mobilePanelInner{
+      border:1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.78);
+      border-radius: var(--radius);
+      padding: 10px;
+      box-shadow: var(--shadow-soft);
+      overflow:hidden;
+
+      transform-origin: top;
+      transform: translateY(-6px) scaleY(.98);
+      opacity: 0;
+      max-height: 0;
+      transition: max-height .35s var(--ease), opacity .25s var(--ease), transform .35s var(--ease);
+    }
+    .mobilePanel.open{ padding: 10px 0 14px; } /* spacing only when open */
+    .mobilePanel.open .mobilePanelInner{
+      opacity: 1;
+      transform: translateY(0) scaleY(1);
+      max-height: 420px;
+    }
+    .mobilePanel a{
+      display:block;
+      padding:12px 12px;
+      border-radius: 14px;
+      font-weight:900;
+      color: rgba(16,24,40,.92);
+    }
+    .mobilePanel a:hover{ background: rgba(14,111,109,.08); }
+
+    /* Hero */
+    .hero{ padding: 18px 0 12px; } /* tighter */
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .heroCard{
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(231,221,207,.95);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .heroCard:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 24px 60px rgba(11,31,42,.14);
+    }
+    .heroCard::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(circle at 15% 18%, rgba(201,162,78,.22), transparent 50%),
+        radial-gradient(circle at 82% 20%, rgba(14,111,109,.18), transparent 46%),
+        linear-gradient(180deg, rgba(11,31,42,.06), transparent 45%),
+        radial-gradient(circle at 55% 120%, rgba(11,31,42,.12), transparent 55%);
+      pointer-events:none;
+    }
+    .heroInner{ position:relative; padding: 28px 22px 22px; }
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-weight:950;
+      color: var(--navy);
+      letter-spacing: .2px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(14,111,109,.08);
+      border: 1px solid rgba(14,111,109,.14);
+      margin-bottom: 12px;
+    }
+    .kicker .dot{
+      width:9px; height:9px; border-radius:99px;
+      background: var(--teal);
+      box-shadow: 0 0 0 6px rgba(14,111,109,.10);
+    }
+
+    h1{
+      margin:0;
+      font-size: clamp(30px, 3.2vw, 46px);
+      line-height: 1.06;
+      letter-spacing: -0.7px;
+      color: var(--navy);
+    }
+    .sub{
+      margin: 12px 0 18px;
+      color: var(--muted);
+      font-size: 16.5px;
+      max-width: 62ch;
+    }
+
+    .heroActions{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 6px;
+    }
+    .heroMeta{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-weight:800;
+      font-size: 13.5px;
+    }
+    .metaPill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 9px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.74);
+      border:1px solid rgba(231,221,207,.95);
+      box-shadow: 0 10px 22px rgba(11,31,42,.06);
+    }
+    .metaPill svg{ width:16px; height:16px; }
+
+    /* Side card */
+    .sideCard{
+      padding: 18px;
+      display:flex; flex-direction:column; gap:12px;
+      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.84));
+    }
+    .sideTitle{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,162,78,.32);
+      background: rgba(201,162,78,.14);
+      font-weight:950;
+      color: var(--navy);
+      font-size: 13px;
+      white-space:nowrap;
+    }
+    .sideCard h2{ margin:0; font-size: 18px; letter-spacing:-.2px; color: var(--navy); }
+    .sideCard p{ margin:0; color: var(--muted); font-size: 14.5px; }
+
+    .featureList{ display:grid; gap:10px; margin-top: 6px; }
+    .feat{
+      display:flex; gap:10px; align-items:flex-start;
+      padding: 12px 12px;
+      border-radius: 16px;
+      border:1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.82);
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+    }
+    .feat:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 14px 32px rgba(11,31,42,.10);
+    }
+    .feat .i{
+      width:34px; height:34px; border-radius: 14px;
+      background: rgba(14,111,109,.10);
+      border:1px solid rgba(14,111,109,.14);
+      display:flex; align-items:center; justify-content:center;
+      flex:0 0 auto;
+    }
+    .feat .i svg{ width:18px; height:18px; }
+    .feat strong{ display:block; color: var(--navy); font-weight:950; }
+    .feat span{ display:block; color: var(--muted); font-size: 13.5px; margin-top:2px; }
+
+    /* Sections */
+    section{ padding: 30px 0; }
+    .sectionHead{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
+      margin-bottom: 16px;
+    }
+    .sectionHead h2{ margin:0; font-size: 24px; letter-spacing: -.3px; color: var(--navy); }
+    .sectionHead p{ margin:0; color: var(--muted); max-width: 64ch; }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      background: var(--surface);
+      border: 1px solid rgba(231,221,207,.95);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      overflow:hidden;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 18px 42px rgba(11,31,42,.12);
+    }
+    .cardPad{ padding: 16px; }
+    .card h3{ margin: 0 0 6px; color: var(--navy); letter-spacing:-.2px; font-size: 16.5px; font-weight:950; }
+    .card p{ margin:0; color: var(--muted); font-size: 14.5px; }
+
+    .pillRow{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 12px; }
+    .softPill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(14,111,109,.08);
+      border:1px solid rgba(14,111,109,.14);
+      font-weight: 900;
+      color: rgba(16,24,40,.92);
+      font-size: 13.5px;
+    }
+    .softPill svg{ width:16px; height:16px; }
+
+    /* Split block */
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .big{
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at 15% 22%, rgba(201,162,78,.18), transparent 52%),
+        radial-gradient(circle at 78% 30%, rgba(14,111,109,.12), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.88));
+      border: 1px solid rgba(231,221,207,.95);
+      box-shadow: var(--shadow);
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .big:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 24px 60px rgba(11,31,42,.14);
+    }
+    .big h3{ margin:0 0 10px; color: var(--navy); letter-spacing:-.2px; font-weight:950; }
+    .big p{ margin:0; color: var(--muted); }
+
+    .bullets{
+      margin: 12px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid; gap:10px;
+    }
+    .bullets li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding: 12px 12px;
+      border-radius: 16px;
+      border:1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.78);
+      box-shadow: 0 10px 22px rgba(11,31,42,.06);
+    }
+    .check{
+      width:22px; height:22px; border-radius: 8px;
+      background: rgba(14,111,109,.10);
+      border:1px solid rgba(14,111,109,.16);
+      display:flex; align-items:center; justify-content:center;
+      flex:0 0 auto;
+      margin-top:1px;
+    }
+    .check svg{ width:14px; height:14px; }
+
+    /* Testimonials */
+    .quote{
+      display:flex; flex-direction:column; gap:10px;
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.88);
+      border:1px solid rgba(231,221,207,.95);
+      box-shadow: var(--shadow-soft);
+      min-height: 160px;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .quote:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 18px 42px rgba(11,31,42,.12);
+    }
+    .quote p{ margin:0; color: var(--muted); font-size: 15px; }
+    .quote strong{ color: var(--navy); font-weight:950; }
+    .quote .who{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:auto; }
+    .quote .tag{
+      font-weight:950; font-size:12.5px;
+      padding:8px 10px; border-radius:999px;
+      background: rgba(201,162,78,.14);
+      border: 1px solid rgba(201,162,78,.32);
+      color: var(--navy);
+      white-space:nowrap;
+    }
+
+    /* FAQ */
+    .faq{ display:grid; gap: 10px; }
+    details{
+      background: rgba(255,255,255,.88);
+      border:1px solid rgba(231,221,207,.95);
+      border-radius: 16px;
+      box-shadow: 0 10px 26px rgba(11,31,42,.06);
+      overflow:hidden;
+      transition: transform .25s var(--ease);
+    }
+    details:hover{ transform: translateY(-1px); }
+    summary{
+      cursor:pointer;
+      padding: 14px 14px;
+      list-style:none;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      font-weight:950;
+      color: var(--navy);
+    }
+    summary::-webkit-details-marker{ display:none; }
+    .faqBody{ padding: 0 14px 14px; color: var(--muted); font-size: 14.5px; }
+    .chev{ width:18px; height:18px; transition: transform .25s var(--ease); }
+    details[open] .chev{ transform: rotate(180deg); }
+
+    /* CTA band */
+    .ctaBand{
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(231,221,207,.95);
+      background:
+        radial-gradient(circle at 12% 18%, rgba(14,111,109,.16), transparent 55%),
+        radial-gradient(circle at 86% 26%, rgba(201,162,78,.18), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.84));
+      box-shadow: var(--shadow);
+      padding: 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      flex-wrap:wrap;
+    }
+    .ctaBand h3{ margin:0; color: var(--navy); letter-spacing:-.2px; font-weight:950; }
+    .ctaBand p{ margin: 6px 0 0; color: var(--muted); }
+
+    /* Footer */
+    footer{
+      margin-top: 18px;
+      background: linear-gradient(180deg, rgba(11,31,42,.06), rgba(11,31,42,.00));
+      border-top: 1px solid rgba(231,221,207,.9);
+      padding: 30px 0;
+    }
+    .footGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr .8fr;
+      gap: 14px;
+      align-items:start;
+    }
+    .foot h4{ margin:0 0 10px; color: var(--navy); letter-spacing:-.2px; font-weight:950; }
+    .foot p, .foot a{ color: var(--muted); font-size: 14.5px; }
+    .foot a:hover{ color: var(--navy); }
+    .foot ul{ list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+    .copyright{
+      margin-top: 14px;
+      color: rgba(71,84,103,.9);
+      font-size: 13px;
+    }
+
+    /* Floating WhatsApp */
+    .waFloat{
+      position:fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 60;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .waBubble{
+      display:block;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.92);
+      border:1px solid rgba(231,221,207,.95);
+      box-shadow: 0 16px 34px rgba(11,31,42,.12);
+      color: var(--navy);
+      font-weight:950;
+      font-size: 13px;
+      white-space:nowrap;
+      transform: translateY(0);
+      transition: transform .25s var(--ease);
+    }
+    .waBtn{
+      width: 56px; height:56px;
+      border-radius: 20px;
+      display:flex; align-items:center; justify-content:center;
+      background: linear-gradient(135deg, rgba(201,162,78,.35), rgba(201,162,78,.14));
+      border: 1px solid rgba(201,162,78,.32);
+      box-shadow: 0 18px 40px rgba(11,31,42,.16);
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+      position:relative;
+    }
+    .waBtn:after{
+      content:"";
+      position:absolute;
+      inset:-8px;
+      border-radius: 24px;
+      border: 2px solid rgba(201,162,78,.25);
+      opacity:.0;
+      transform: scale(.95);
+      animation: pulse 2.2s var(--ease) infinite;
+      pointer-events:none;
+    }
+    .waBtn:hover{ transform: translateY(-2px); box-shadow: 0 22px 50px rgba(11,31,42,.22); }
+    .waBtn:hover + .waBubble{ transform: translateY(-2px); }
+    .waBtn svg{ width:24px; height:24px; }
+
+    @keyframes pulse{
+      0%{ opacity:0; transform: scale(.92); }
+      15%{ opacity:.75; }
+      55%{ opacity:0; transform: scale(1.06); }
+      100%{ opacity:0; transform: scale(1.06); }
+    }
+
+    /* Reveal */
+    .reveal{
+      opacity:0;
+      transform: translateY(14px);
+      transition: opacity .6s var(--ease), transform .6s var(--ease);
+      will-change: opacity, transform;
+    }
+    .reveal.in{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .footGrid{ grid-template-columns: 1fr; }
+      .grid3{ grid-template-columns: 1fr; }
+      .split{ grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 860px){
+      .container{ width: calc(100% - 28px); }
+      nav ul{ display:none; }
+      .menuBtn{ display:inline-flex; }
+      .heroInner{ padding: 24px 16px 18px; }
+      .sideCard{ padding: 16px; }
+      .logoMark{ width:34px; height:34px; border-radius:12px; }
+      .btn{ padding:10px 12px; }
+    }
+
+    @media (max-width: 520px){
+      .brand span{ display:none; }
+      .navRight .btnOutline{ display:none; } /* declutter tiny screens */
+      .heroActions .btn{ width:100%; }      /* tap-friendly buttons */
+      .ctaBand .btn{ width:100%; }
+      .waBubble{ display:none; }            /* keep only icon on very small screens */
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ scroll-behavior:auto !important; }
+      .reveal{ transition:none; transform:none; opacity:1; }
+      .btn, .waBtn, nav a, .card, .quote, .big, .heroCard, .feat{ transition:none; }
+      .waBtn:after{ animation:none; }
+    }
+  </style>
+
+  <!-- Schema: LodgingBusiness + FAQ -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "name": "BeachViewStays.pk",
-    "description": "Premium serviced 1-bedroom apartments near the beach in DHA Karachi. Fully furnished, family & tourist friendly, secure & peaceful, with high-speed Wi-Fi, housekeeping support, AC, smart TV, kitchenette, attached bath, and 24/7 sweet water.",
-    "url": "https://beachviewstays.pk",
-    "telephone": "+923068230101",
-    "email": "karachi.apartments@gmail.com",
-    "numberOfRooms": 5,
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "DHA Karachi",
-      "addressRegion": "Sindh",
-      "addressCountry": "PK"
-    }
+    "@context":"https://schema.org",
+    "@type":"LodgingBusiness",
+    "name":"Beach View Stays",
+    "url":"https://beachviewstays.pk/",
+    "telephone":"+923068230101",
+    "email":"karachi.apartments@gmail.com",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"DHA",
+      "addressRegion":"Karachi",
+      "addressCountry":"PK"
+    },
+    "amenityFeature":[
+      {"@type":"LocationFeatureSpecification","name":"High-speed Wi-Fi","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Air Conditioning","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Kitchen/Kitchenette","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Housekeeping","value":true},
+      {"@type":"LocationFeatureSpecification","name":"24/7 Sweet Water","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Electric Geyser","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Smart TV","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Secure & Peaceful Environment","value":true}
+    ],
+    "numberOfRooms":"5"
   }
   </script>
 
-  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Is Beach View Stays family-friendly?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our apartments are family and tourist friendly with a secure, peaceful environment and serviced support."}},
+      {"@type":"Question","name":"Do you offer daily or short stays?","acceptedAnswer":{"@type":"Answer","text":"Yes. Daily and short-stay options are available. Share your dates on WhatsApp for quick availability."}},
+      {"@type":"Question","name":"Is the beach nearby?","acceptedAnswer":{"@type":"Answer","text":"Yes. We are located in DHA Karachi with convenient access to beach areas and nearby attractions."}},
+      {"@type":"Question","name":"How do I book?","acceptedAnswer":{"@type":"Answer","text":"Message us on WhatsApp with check-in/check-out dates and number of guests. We’ll confirm availability and rates."}}
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <!-- Skip link for accessibility -->
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- Navbar -->
-  <header class="site-header" id="top">
-    <nav class="nav container" aria-label="Primary">
-      <a class="brand" href="#top" aria-label="BeachViewStays Home">
-        <span class="brand-mark" aria-hidden="true">BV</span>
-        <span class="brand-text">
-          <span class="brand-name">BeachViewStays.pk</span>
-          <span class="brand-tagline">Relax. Stay. Enjoy the View.</span>
-        </span>
-      </a>
-
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
-        <span class="sr-only">Open menu</span>
-        <span class="hamburger" aria-hidden="true"></span>
-      </button>
-
-      <div class="nav-menu" id="navMenu">
-        <ul class="nav-links">
-          <li><a href="#top" data-navlink>Home</a></li>
-          <li><a href="#about" data-navlink>About</a></li>
-          <li><a href="#gallery" data-navlink>Gallery</a></li>
-          <li><a href="#facilities" data-navlink>Facilities</a></li>
-          <li><a href="#contact" data-navlink>Contact</a></li>
-        </ul>
-
-        <a class="btn btn-whatsapp" href="https://wa.me/923068230101" target="_blank" rel="noopener">
-          WhatsApp Booking
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="/" aria-label="Beach View Stays Home">
+          <div class="logoMark" aria-hidden="true"></div>
+          <div>
+            <strong>Beach View Stays</strong>
+            <span>Relax. Stay. Enjoy the View.</span>
+          </div>
         </a>
+
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="navRight">
+          <a class="btn btnOutline" href="contact.html" aria-label="Check availability">Check Availability</a>
+          <a class="btn btnWhatsapp" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.5 3.5A11 11 0 0 0 3.7 17.7L3 21l3.4-.7A11 11 0 0 0 20.5 3.5ZM12 20a9 9 0 0 1-4.6-1.3l-.3-.2-2 .4.4-2-.2-.3A9 9 0 1 1 12 20Z"/></svg>
+            WhatsApp Booking
+          </a>
+          <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 7h16v2H4zm0 8h16v2H4zm0-4h16v2H4z"/></svg>
+          </button>
+        </div>
       </div>
-    </nav>
+
+      <div class="mobilePanel" id="mobilePanel" aria-hidden="true">
+        <div class="mobilePanelInner">
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="facilities.html">Facilities</a>
+          <a href="contact.html">Contact</a>
+          <div style="padding:10px;">
+            <a class="btn btnPrimary" style="width:100%;" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">
+              Book on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </header>
 
-  <main id="main">
-    <!-- Hero -->
+  <main>
+    <!-- HERO -->
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Premium serviced stays • DHA Karachi • Near the beach</p>
-          <h1>Premium 1-Bedroom Serviced Apartments in DHA Karachi</h1>
-          <p class="subheadline">
-            BeachViewStays.pk offers five fully furnished 1-bedroom apartments designed for families and tourists who want a secure, peaceful, and spotless stay—with the comfort of home and the convenience of serviced living.
-          </p>
+      <div class="container">
+        <div class="heroGrid">
+          <div class="heroCard reveal" data-delay="0">
+            <div class="heroInner">
+              <div class="kicker"><span class="dot" aria-hidden="true"></span> Premium Serviced Apartments • DHA Karachi</div>
+              <h1>Relax. Stay. Enjoy the View.</h1>
+              <p class="sub">
+                Premium <strong>1-bedroom</strong> serviced apartments in DHA Karachi — fully furnished, secure, and spotless. Fast booking on WhatsApp.
+              </p>
 
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#contact">Check Availability</a>
-            <a class="btn btn-secondary" href="https://wa.me/923068230101" target="_blank" rel="noopener">
-              WhatsApp Booking
-            </a>
+              <div class="heroActions">
+                <a class="btn btnPrimary" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.5 3.5A11 11 0 0 0 3.7 17.7L3 21l3.4-.7A11 11 0 0 0 20.5 3.5ZM12 20a9 9 0 0 1-4.6-1.3l-.3-.2-2 .4.4-2-.2-.3A9 9 0 1 1 12 20Z"/></svg>
+                  Book on WhatsApp
+                </a>
+                <a class="btn btnOutline" href="gallery.html">View Gallery</a>
+              </div>
+
+              <div class="heroMeta" aria-label="Quick highlights">
+                <div class="metaPill">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm1 10H7V10h4V6h2v6Z"/></svg>
+                  Daily & short stays
+                </div>
+                <div class="metaPill">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 2 7v6c0 5 3.8 9.4 10 11 6.2-1.6 10-6 10-11V7L12 2Zm0 18c-4.7-1.4-8-5-8-9.1V8.2l8-4 8 4v2.7c0 4.1-3.3 7.7-8 9.1Z"/></svg>
+                  Secure & peaceful
+                </div>
+                <div class="metaPill">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5h13v2H8V5ZM3 6a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm5 11h13v2H8v-2ZM3 18a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm5-7h13v2H8v-2ZM3 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/></svg>
+                  Fully furnished
+                </div>
+              </div>
+            </div>
           </div>
 
-          <ul class="hero-badges" aria-label="Key features">
-            <li>High-speed Wi-Fi</li>
-            <li>AC + Electric geyser</li>
-            <li>Housekeeping support</li>
-          </ul>
-        </div>
+          <aside class="heroCard sideCard reveal" data-delay="90" aria-label="At a glance">
+            <div class="sideTitle">
+              <h2>At a glance</h2>
+              <span class="badge">Only 5 units</span>
+            </div>
+            <p>Private, calm, and serviced — ideal for families, tourists, and short stays.</p>
 
-        <div class="hero-card" aria-label="Stay highlights">
-          <div class="hero-card-inner">
-            <h2 class="card-title">What you’ll love</h2>
-            <p class="card-text">
-              A clean, calm apartment with a lounge area, kitchenette, attached bath, and smart TV—ideal for daily and short stays.
-            </p>
-
-            <div class="mini-grid">
-              <div class="mini-item">
-                <span class="mini-label">Inventory</span>
-                <span class="mini-value">5 units total</span>
+            <div class="featureList">
+              <div class="feat">
+                <div class="i" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 21h10a2 2 0 0 0 2-2V9l-7-6-7 6v10a2 2 0 0 0 2 2Zm4-2v-6h2v6h-2Z"/></svg>
+                </div>
+                <div>
+                  <strong>Home-like space</strong>
+                  <span>Bedroom + lounge + kitchen/kitchenette.</span>
+                </div>
               </div>
-              <div class="mini-item">
-                <span class="mini-label">Apartment type</span>
-                <span class="mini-value">1-Bedroom</span>
+              <div class="feat">
+                <div class="i" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M6 4h12v2H6V4Zm-2 6h16v10H4V10Zm2 2v6h12v-6H6Z"/></svg>
+                </div>
+                <div>
+                  <strong>Smart essentials</strong>
+                  <span>Wi-Fi, Smart TV, AC, clean linens.</span>
+                </div>
               </div>
-              <div class="mini-item">
-                <span class="mini-label">Guests</span>
-                <span class="mini-value">Family & tourists</span>
-              </div>
-              <div class="mini-item">
-                <span class="mini-label">Booking</span>
-                <span class="mini-value">WhatsApp / Email</span>
+              <div class="feat">
+                <div class="i" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 2.6 1.4 4.9 3.6 6.1L8 22h8l-.6-6.9A7 7 0 0 0 19 9a7 7 0 0 0-7-7Zm2 18h-4l.4-4h3.2l.4 4Z"/></svg>
+                </div>
+                <div>
+                  <strong>Reliable utilities</strong>
+                  <span>24/7 sweet water + electric geyser.</span>
+                </div>
               </div>
             </div>
 
-            <a class="btn btn-tertiary" href="#about">Explore the stay</a>
+            <div style="margin-top: 6px;">
+              <a class="btn btnPrimary" style="width:100%;" href="contact.html">Check availability</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section>
+      <div class="container">
+        <div class="sectionHead reveal" data-delay="0">
+          <div>
+            <h2>Why guests choose Beach View Stays</h2>
+            <p>Clean. Calm. Convenient. Everything guests care about.</p>
           </div>
         </div>
-      </div>
-      <div class="hero-glow" aria-hidden="true"></div>
-    </section>
 
-    <!-- About -->
-    <section class="section" id="about">
-      <div class="container section-grid">
-        <div>
-          <h2>Serviced comfort, built for premium stays</h2>
-          <p class="lead">
-            BeachViewStays.pk is a premium serviced stay option in DHA Karachi, created for guests who want a quiet, well-maintained apartment experience near the beach.
-          </p>
-          <p>
-            Each unit is fully furnished and thoughtfully arranged for real living—whether you’re visiting for a short trip, family time, or a peaceful break.
-          </p>
+        <div class="grid3">
+          <div class="card reveal" data-delay="0">
+            <div class="cardPad">
+              <h3>Comfort that feels like home</h3>
+              <p>Private 1-bedroom apartments with lounge and kitchen space—ideal for families and longer stays.</p>
+              <div class="pillRow">
+                <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 21h10a2 2 0 0 0 2-2V9l-7-6-7 6v10a2 2 0 0 0 2 2Z"/></svg> 1-bedroom units</span>
+                <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 6h16v12H4z"/></svg> Lounge area</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal" data-delay="90">
+            <div class="cardPad">
+              <h3>Hotel-level cleanliness</h3>
+              <p>Housekeeping support and consistently clean spaces—so the stay feels premium, every time.</p>
+              <div class="pillRow">
+                <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16 2H8v2H5v2h14V4h-3V2Zm-9 8h10v10H7V10Zm2 2v6h6v-6H9Z"/></svg> Hygienic rooms</span>
+                <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 2 7v6c0 5 3.8 9.4 10 11 6.2-1.6 10-6 10-11V7L12 2Z"/></svg> Safe & secure</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal" data-delay="180">
+            <div class="cardPad">
+              <h3>DHA + beach convenience</h3>
+              <p>Located in DHA Karachi with easy access to beach areas, Clifton routes, restaurants, and key city spots.</p>
+              <div class="pillRow">
+                <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 18h18v2H3v-2Zm2-4 4-10h6l4 10H5Zm3.1-2h7.8l-2.4-6H10.5l-2.4 6Z"/></svg> Near beach</span>
+                <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg> DHA Karachi</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="panel">
-          <h3 class="panel-title">Stay ready essentials</h3>
-          <ul class="checklist">
-            <li>Fully furnished 1-bedroom layout</li>
-            <li>Lounge area + kitchenette</li>
-            <li>Attached bath</li>
-            <li>Smart TV + high-speed Wi-Fi</li>
-            <li>AC + electric geyser</li>
-            <li>24/7 sweet water</li>
-          </ul>
-        </div>
       </div>
     </section>
 
-    <!-- Highlights (8 items with inline SVG icons) -->
-    <section class="section section-muted" aria-labelledby="highlightsTitle">
+    <!-- WHAT'S INCLUDED -->
+    <section>
       <div class="container">
-        <div class="section-head">
-          <h2 id="highlightsTitle">Highlights</h2>
-          <p class="muted">Everything you expect from a premium serviced apartment—kept simple, clean, and reliable.</p>
-        </div>
-
-        <div class="grid highlights">
-          <!-- 1 -->
-          <article class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M4 12c3-5 13-5 16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M6 15c2-3 10-3 12 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M12 18h0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>High-speed Wi-Fi</h3>
-            <p>Work, stream, and stay connected comfortably.</p>
-          </article>
-
-          <!-- 2 -->
-          <article class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M7 11h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M9 7h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M8 21h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M12 3v18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Electric geyser</h3>
-            <p>Hot water comfort designed for daily stays.</p>
-          </article>
-
-          <!-- 3 -->
-          <article class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M4 20V9a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M7 6V4h10v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M8 20v-4h8v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Fully furnished</h3>
-            <p>Move-in ready setup with a premium feel.</p>
-          </article>
-
-          <!-- 4 -->
-          <article class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M5 12l2-5h10l2 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M7 16h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Lounge area</h3>
-            <p>Space to relax, reset, and enjoy your stay.</p>
-          </article>
-
-          <!-- 5 -->
-          <article class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M4 10h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M6 10V6h12v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M8 14h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M7 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Kitchen / kitchenette</h3>
-            <p>Practical setup for light cooking and convenience.</p>
-          </article>
-
-          <!-- 6 -->
-          <article class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M7 20V6a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M10 10h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M10 14h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Attached bath</h3>
-            <p>Private, convenient, and kept tidy.</p>
-          </article>
-
-          <!-- 7 -->
-          <article class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M4 12a8 8 0 1 1 16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M12 12l4-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Daily / short stays</h3>
-            <p>Flexible stays built around your schedule.</p>
-          </article>
-
-          <!-- 8 -->
-          <article class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 3l8 4v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M9 12l2 2 4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Secure & peaceful</h3>
-            <p>A calm environment with security measures in place.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why BeachViewStays -->
-    <section class="section" aria-labelledby="whyTitle">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="whyTitle">Why BeachViewStays</h2>
-          <p class="muted">Premium stays aren’t about fancy words—just consistent quality and trust.</p>
-        </div>
-
-        <div class="trust">
-          <article class="trust-card">
-            <h3>Cleanliness you can feel</h3>
-            <p>
-              We prioritize a spotless living space—clean surfaces, tidy rooms, and housekeeping support that helps maintain a fresh stay.
-            </p>
-          </article>
-
-          <article class="trust-card">
-            <h3>Privacy by design</h3>
-            <p>
-              A private apartment setup means you’re not sharing hallways like a typical hotel experience—ideal for families and longer comfort.
-            </p>
-          </article>
-
-          <article class="trust-card">
-            <h3>Security & peace of mind</h3>
-            <p>
-              A secure and peaceful environment with practical safety measures such as CCTV/security presence in common areas (where applicable),
-              without overpromising—just sensible protection.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Apartments -->
-    <section class="section section-muted" id="facilities" aria-labelledby="apartmentsTitle">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="apartmentsTitle">Our 1-Bedroom Apartments</h2>
-          <p class="muted">
-            One format, delivered consistently: premium 1-bedroom serviced apartments designed for comfort and short stays.
-            <strong class="pill">5 units available</strong>
-          </p>
-        </div>
-
-        <div class="apt-grid">
-          <article class="apt-card">
-            <h3>1-Bedroom Layout</h3>
-            <p>
-              A comfortable bedroom plus a lounge area—easy to relax, work, or unwind after a day out.
-            </p>
-            <ul class="bullets">
-              <li>Bedroom + lounge area</li>
-              <li>Attached bath</li>
-              <li>Smart TV + high-speed Wi-Fi</li>
+        <div class="split">
+          <div class="big reveal" data-delay="0">
+            <h3>Everything you need for a relaxed stay</h3>
+            <p>Strong internet, comfort-first interiors, and reliable utilities—so your stay stays smooth.</p>
+            <ul class="bullets" aria-label="Included features">
+              <li>
+                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
+                <div><strong>High-speed Wi-Fi + Smart TV</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Work, stream, and stay connected.</div></div>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
+                <div><strong>Kitchen / kitchenette</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Simple meals, easy routine.</div></div>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
+                <div><strong>24/7 sweet water + electric geyser</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Reliable water and hot showers.</div></div>
+              </li>
             </ul>
-          </article>
+          </div>
 
-          <article class="apt-card">
-            <h3>Serviced Comfort</h3>
-            <p>
-              Built for convenience with key utilities and support—so your stay feels smooth and reliable.
-            </p>
-            <ul class="bullets">
-              <li>Housekeeping support</li>
-              <li>24/7 sweet water</li>
-              <li>Electric geyser</li>
+          <div class="big reveal" data-delay="120">
+            <h3>Built for families, tourists & calm stays</h3>
+            <p>Best for guests who value privacy, hygiene, and a peaceful atmosphere. WhatsApp is the fastest route for availability and rates.</p>
+
+            <ul class="bullets" aria-label="Good for">
+              <li>
+                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
+                <div><strong>Families & overseas guests</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Home-like comfort with serviced support.</div></div>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
+                <div><strong>Daily & short stays</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Simple flow, quick confirmations.</div></div>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
+                <div><strong>Peaceful environment</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Secure, calm, and maintained.</div></div>
+              </li>
             </ul>
-          </article>
 
-          <article class="apt-card">
-            <h3>Daily Stay Essentials</h3>
-            <p>
-              The things that matter for Karachi stays—cooling, cooking convenience, and a comfortable environment.
-            </p>
-            <ul class="bullets">
-              <li>AC</li>
-              <li>Kitchen / kitchenette</li>
-              <li>Fully furnished</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="note">
-          <p><strong>No pricing on website.</strong> Share your dates and guest details and we’ll confirm availability via WhatsApp or email.</p>
-          <div class="note-cta">
-            <a class="btn btn-primary" href="#contact">Check Availability</a>
-            <a class="btn btn-secondary" href="https://wa.me/923068230101" target="_blank" rel="noopener">WhatsApp Booking</a>
+            <div style="margin-top: 12px;">
+              <a class="btn btnWhatsapp" style="width:100%;" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">
+                Ask availability on WhatsApp
+              </a>
+              <div style="margin-top:10px; color:var(--muted); font-size:13.5px;">
+                Tip: Send <strong>dates</strong> + <strong>number of guests</strong> for the fastest reply.
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Gallery (simple placeholders without lorem ipsum) -->
-    <section class="section" id="gallery" aria-labelledby="galleryTitle">
+    <!-- TESTIMONIALS -->
+    <section>
       <div class="container">
-        <div class="section-head">
-          <h2 id="galleryTitle">Gallery</h2>
-          <p class="muted">Add your real apartment photos here for maximum trust and conversion.</p>
-        </div>
-
-        <div class="gallery-grid" role="list">
-          <div class="photo ph" role="listitem"><span>Living / Lounge (Photo)</span></div>
-          <div class="photo ph" role="listitem"><span>Bedroom (Photo)</span></div>
-          <div class="photo ph" role="listitem"><span>Kitchenette (Photo)</span></div>
-          <div class="photo ph" role="listitem"><span>Bath (Photo)</span></div>
-          <div class="photo ph" role="listitem"><span>Smart TV / Setup (Photo)</span></div>
-          <div class="photo ph" role="listitem"><span>Building / Entrance (Photo)</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Location teaser -->
-    <section class="section section-muted" aria-labelledby="locationTitle">
-      <div class="container location">
-        <div class="location-copy">
-          <h2 id="locationTitle">Location</h2>
-          <p class="lead">
-            Located in DHA Karachi near the beach—ideal for guests who want a calm premium stay in a well-known area.
-          </p>
-          <p class="muted">
-            For exact location details and directions, please message us on WhatsApp. We’ll guide you based on your arrival route.
-          </p>
-          <a class="btn btn-secondary" href="https://wa.me/923068230101" target="_blank" rel="noopener">Get directions on WhatsApp</a>
-        </div>
-
-        <div class="map-card" aria-label="Map placeholder">
-          <div class="map-ph">
-            <span>Map / Location Embed Placeholder</span>
+        <div class="sectionHead reveal" data-delay="0">
+          <div>
+            <h2>Guest-first experience</h2>
+            <p>Clean apartments, reliable support, and a calm stay near the beach—simple, consistent, premium.</p>
           </div>
-          <p class="map-note">Tip: Embed a Google Map here once the exact pin is confirmed.</p>
         </div>
+
+        <div class="grid3">
+          <div class="quote reveal" data-delay="0">
+            <p>“Private and peaceful. Clean rooms, smooth check-in, and everything worked.”</p>
+            <div class="who">
+              <strong>Family Guest</strong>
+              <span class="tag">Clean & calm</span>
+            </div>
+          </div>
+          <div class="quote reveal" data-delay="90">
+            <p>“Good Wi-Fi and comfortable space. Great if you don’t want a crowded hotel environment.”</p>
+            <div class="who">
+              <strong>Short-stay Traveler</strong>
+              <span class="tag">Wi-Fi ready</span>
+            </div>
+          </div>
+          <div class="quote reveal" data-delay="180">
+            <p>“Convenient for DHA and beach areas. Support was quick on WhatsApp.”</p>
+            <div class="who">
+              <strong>Tourist</strong>
+              <span class="tag">Fast support</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TODO: Replace placeholders with real guest reviews. Do not invent ratings. -->
       </div>
     </section>
 
-    <!-- Testimonials (3 placeholders, clearly marked) -->
-    <section class="section" aria-labelledby="testimonialsTitle">
+    <!-- FAQ -->
+    <section>
       <div class="container">
-        <div class="section-head">
-          <h2 id="testimonialsTitle">Guest Testimonials</h2>
-          <p class="muted">Placeholders — replace with real guest feedback for credibility.</p>
+        <div class="sectionHead reveal" data-delay="0">
+          <div>
+            <h2>FAQs</h2>
+            <p>Clear answers, no fluff—so guests can book confidently.</p>
+          </div>
         </div>
 
-        <div class="t-grid">
-          <figure class="t-card">
-            <blockquote>
-              “Placeholder testimonial: Mention cleanliness, calm environment, and comfort during the stay.”
-            </blockquote>
-            <figcaption>— Placeholder Name, Karachi</figcaption>
-          </figure>
+        <div class="faq">
+          <details class="reveal" data-delay="0">
+            <summary>
+              Is Beach View Stays family-friendly?
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
+            </summary>
+            <div class="faqBody">Yes. Our apartments are family and tourist friendly with a secure, peaceful environment and serviced support.</div>
+          </details>
 
-          <figure class="t-card">
-            <blockquote>
-              “Placeholder testimonial: Mention family-friendly setup and convenience of Wi-Fi, AC, and kitchenette.”
-            </blockquote>
-            <figcaption>— Placeholder Name, Visitor</figcaption>
-          </figure>
+          <details class="reveal" data-delay="90">
+            <summary>
+              Do you offer daily or short stays?
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
+            </summary>
+            <div class="faqBody">Yes. Daily and short-stay options are available. Share your dates on WhatsApp for quick availability and rates.</div>
+          </details>
 
-          <figure class="t-card">
-            <blockquote>
-              “Placeholder testimonial: Mention smooth booking via WhatsApp and overall premium feel.”
-            </blockquote>
-            <figcaption>— Placeholder Name, Tourist</figcaption>
-          </figure>
+          <details class="reveal" data-delay="180">
+            <summary>
+              What’s included in the apartments?
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
+            </summary>
+            <div class="faqBody">Fully furnished 1-bedroom units with AC, lounge area, kitchen/kitchenette, attached bath, Smart TV, Wi-Fi, linens, 24/7 sweet water, and an electric geyser.</div>
+          </details>
+
+          <details class="reveal" data-delay="270">
+            <summary>
+              How do I book?
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
+            </summary>
+            <div class="faqBody">WhatsApp us with check-in/check-out dates and number of guests. We’ll confirm availability, rates, and booking steps quickly.</div>
+          </details>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Accordion (vanilla JS) -->
-    <section class="section section-muted" aria-labelledby="faqTitle">
+    <!-- CTA BAND -->
+    <section>
       <div class="container">
-        <div class="section-head">
-          <h2 id="faqTitle">FAQ</h2>
-          <p class="muted">Clear answers before you book.</p>
-        </div>
-
-        <div class="faq" data-accordion>
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              What type of stay is BeachViewStays.pk?
-              <span class="faq-icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-a" hidden>
-              <p>
-                We offer premium serviced <strong>1-bedroom apartments</strong> in DHA Karachi—fully furnished and designed for daily and short stays.
-              </p>
-            </div>
+        <div class="ctaBand reveal" data-delay="0">
+          <div>
+            <h3>Instant booking & availability</h3>
+            <p>Send your dates on WhatsApp — we’ll confirm availability and rates fast.</p>
           </div>
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              How many apartments do you have?
-              <span class="faq-icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-a" hidden>
-              <p>
-                We have <strong>5 units total</strong>, all 1-bedroom apartments. Availability depends on dates—message us to confirm.
-              </p>
-            </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btnPrimary" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">Book on WhatsApp</a>
+            <a class="btn btnOutline" href="contact.html">Contact</a>
           </div>
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              What facilities are included?
-              <span class="faq-icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-a" hidden>
-              <p>
-                Highlights include high-speed Wi-Fi, AC, electric geyser, 24/7 sweet water, cleanliness/housekeeping support, lounge area, kitchen/kitchenette, attached bath, and smart TV.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              Is it family & tourist friendly?
-              <span class="faq-icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-a" hidden>
-              <p>
-                Yes—our apartments are set up for families and tourists who want a secure, peaceful, and comfortable stay.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              How do I check availability or book?
-              <span class="faq-icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-a" hidden>
-              <p>
-                Use the contact form below, or book faster via WhatsApp. Share your dates and guest details and we’ll confirm availability.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section" id="contact" aria-labelledby="contactTitle">
-      <div class="container contact">
-        <div class="contact-copy">
-          <h2 id="contactTitle">Check Availability</h2>
-          <p class="lead">
-            Send your dates and basic details. We’ll respond with availability for our 1-bedroom apartments.
-          </p>
-
-          <div class="contact-cards">
-            <a class="contact-card" href="https://wa.me/923068230101" target="_blank" rel="noopener">
-              <span class="cc-kicker">Fastest</span>
-              <span class="cc-title">WhatsApp Booking</span>
-              <span class="cc-sub">+92 306 8230101</span>
-            </a>
-
-            <a class="contact-card" href="mailto:karachi.apartments@gmail.com">
-              <span class="cc-kicker">Email</span>
-              <span class="cc-title">karachi.apartments@gmail.com</span>
-              <span class="cc-sub">For formal inquiries</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="form-wrap">
-          <form class="form" id="availabilityForm" action="#" method="post" novalidate>
-            <div class="form-row">
-              <label for="name">Full name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required />
-            </div>
-
-            <div class="form-row split">
-              <div>
-                <label for="phone">Phone / WhatsApp</label>
-                <input id="phone" name="phone" type="tel" autocomplete="tel" required />
-              </div>
-              <div>
-                <label for="guests">Guests</label>
-                <select id="guests" name="guests" required>
-                  <option value="">Select</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-row split">
-              <div>
-                <label for="checkin">Preferred check-in date</label>
-                <input id="checkin" name="checkin" type="date" required />
-              </div>
-              <div>
-                <label for="nights">Number of nights</label>
-                <input id="nights" name="nights" type="number" min="1" inputmode="numeric" required />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <label for="notes">Notes (optional)</label>
-              <textarea id="notes" name="notes" rows="4" placeholder="Anything important for your stay? (e.g., family trip, arrival time window, special request)"></textarea>
-            </div>
-
-            <div class="form-actions">
-              <button class="btn btn-primary" type="submit">Send Inquiry</button>
-              <a class="btn btn-secondary" href="https://wa.me/923068230101" target="_blank" rel="noopener">WhatsApp Booking</a>
-            </div>
-
-            <p class="form-hint">
-              By submitting, you’re requesting availability confirmation. For fastest response, use WhatsApp.
-            </p>
-          </form>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <div class="brand-row">
-          <span class="brand-mark" aria-hidden="true">BV</span>
-          <div>
-            <div class="footer-name">BeachViewStays.pk</div>
-            <div class="footer-tag">Relax. Stay. Enjoy the View.</div>
-          </div>
+  <footer>
+    <div class="container">
+      <div class="footGrid">
+        <div class="foot">
+          <h4>Beach View Stays</h4>
+          <p>Premium serviced 1-bedroom apartments near the beach in DHA Karachi—comfort, privacy, and hotel-level cleanliness.</p>
+          <p style="margin-top:10px;">
+            <strong style="color:var(--navy);">Email:</strong> <a href="mailto:karachi.apartments@gmail.com">karachi.apartments@gmail.com</a><br/>
+            <strong style="color:var(--navy);">WhatsApp:</strong> <a href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">+92 306 8230101</a>
+          </p>
         </div>
-        <p class="footer-note">
-          Premium serviced 1-bedroom apartments near the beach in DHA Karachi.
-        </p>
+
+        <div class="foot">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="foot">
+          <h4>Location</h4>
+          <p>DHA, Karachi, Pakistan<br/>Near beach areas • Clifton/DHA access</p>
+          <p style="margin-top:10px;">
+            Socials (placeholders):<br/>
+            <a href="#" aria-label="Facebook">Facebook</a> •
+            <a href="#" aria-label="Instagram">Instagram</a> •
+            <a href="#" aria-label="Google Maps">Maps</a>
+          </p>
+        </div>
       </div>
 
-      <div class="footer-col">
-        <h3>Contact</h3>
-        <ul>
-          <li><a href="https://wa.me/923068230101" target="_blank" rel="noopener">WhatsApp: +92 306 8230101</a></li>
-          <li><a href="mailto:karachi.apartments@gmail.com">karachi.apartments@gmail.com</a></li>
-        </ul>
+      <div class="copyright">
+        © <span id="year"></span> Beach View Stays. All rights reserved. • Canonical: https://beachviewstays.pk
       </div>
-
-      <div class="footer-col">
-        <h3>Social</h3>
-        <ul>
-          <li><a href="#" aria-label="Instagram (placeholder link)">Instagram (placeholder)</a></li>
-          <li><a href="#" aria-label="Facebook (placeholder link)">Facebook (placeholder)</a></li>
-          <li><a href="#" aria-label="Google Business Profile (placeholder link)">Google Business (placeholder)</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <small>© <span id="year"></span> BeachViewStays.pk. All rights reserved.</small>
     </div>
   </footer>
 
-  <script src="main.js" defer></script>
+  <!-- Floating WhatsApp -->
+  <div class="waFloat" aria-label="WhatsApp quick booking">
+    <a class="waBtn" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp booking">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="var(--navy)" d="M20.5 3.5A11 11 0 0 0 3.7 17.7L3 21l3.4-.7A11 11 0 0 0 20.5 3.5ZM12 20a9 9 0 0 1-4.6-1.3l-.3-.2-2 .4.4-2-.2-.3A9 9 0 1 1 12 20Zm5.2-6.7c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-1 .9-.4.1-.7 0a7.4 7.4 0 0 1-2.2-1.4A8.2 8.2 0 0 1 9 9.9c-.1-.3 0-.5.1-.6l.5-.6c.1-.2.1-.4 0-.6l-.9-2.1c-.1-.3-.3-.3-.5-.3h-.5c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.4 2.4 3.7 5.8 5.2c.8.3 1.4.5 1.9.6.8.2 1.6.2 2.2.1.7-.1 1.7-.7 1.9-1.4s.2-1.3.1-1.4c0-.2-.3-.3-.6-.4Z"/>
+      </svg>
+    </a>
+    <div class="waBubble">Book on WhatsApp</div>
+  </div>
+
+  <script>
+    (function(){
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Mobile menu
+      const btn = document.getElementById('menuBtn');
+      const panel = document.getElementById('mobilePanel');
+
+      if(btn && panel){
+        const close = () => {
+          btn.setAttribute('aria-expanded','false');
+          panel.classList.remove('open');
+          panel.setAttribute('aria-hidden','true');
+        };
+
+        close();
+
+        btn.addEventListener('click', () => {
+          const open = panel.classList.contains('open');
+          if(open) close();
+          else{
+            btn.setAttribute('aria-expanded','true');
+            panel.classList.add('open');
+            panel.setAttribute('aria-hidden','false');
+          }
+        });
+
+        document.addEventListener('click', (e) => {
+          if(!panel.classList.contains('open')) return;
+          const within = panel.contains(e.target) || btn.contains(e.target);
+          if(!within) close();
+        });
+
+        window.addEventListener('resize', () => {
+          if(window.innerWidth > 860) close();
+        });
+      }
+
+      // Scroll reveal
+      const els = Array.from(document.querySelectorAll('.reveal'));
+      if(reduce){
+        els.forEach(el => el.classList.add('in'));
+      } else {
+        els.forEach(el => {
+          const d = el.getAttribute('data-delay');
+          if(d) el.style.transitionDelay = (parseInt(d,10) || 0) + 'ms';
+        });
+
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if(entry.isIntersecting){
+              entry.target.classList.add('in');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        els.forEach(el => io.observe(el));
+      }
+    })();
+  </script>
 </body>
 </html>
