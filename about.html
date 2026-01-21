@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>About Beach View Stays | Premium Serviced Apartments in DHA Karachi</title>
+  <meta name="description" content="Learn about Beach View Stays—premium serviced 1-bedroom apartments in DHA Karachi near the beach. Clean, secure, family-friendly, fully furnished, with Wi-Fi and housekeeping." />
+  <link rel="canonical" href="https://beachviewstays.pk/about.html" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Beach View Stays | Premium Serviced Apartments in DHA Karachi" />
+  <meta property="og:description" content="Premium serviced 1-bedroom apartments in DHA Karachi—privacy, comfort, and hotel-level cleanliness. Book quickly on WhatsApp." />
+  <meta property="og:url" content="https://beachviewstays.pk/about.html" />
+  <meta property="og:image" content="https://beachviewstays.pk/og-home.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Beach View Stays" />
+  <meta name="twitter:description" content="Premium serviced 1-bedroom apartments in DHA Karachi. Book quickly on WhatsApp." />
+  <meta name="twitter:image" content="https://beachviewstays.pk/og-home.jpg" />
+
+  <meta name="theme-color" content="#0B1F2A" />
+
+  <style>
+    :root{
+      /* Coastal Luxury (hospitality) */
+      --navy:#0B1F2A;
+      --teal:#0E6F6D;
+      --gold:#C9A24E;
+
+      --bg:#F6F2EA;
+      --surface:#FFFFFF;
+      --border:#E7DDCF;
+
+      --text:#101828;
+      --muted:#475467;
+
+      --shadow: 0 18px 45px rgba(11,31,42,.10);
+      --shadow-soft: 0 10px 26px rgba(11,31,42,.08);
+
+      --radius: 18px;
+      --radius-lg: 26px;
+
+      --container: 1100px;
+      --ease: cubic-bezier(.2,.8,.2,1);
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: var(--bg);
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      overflow-x:hidden;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    img{ max-width:100%; height:auto; display:block; }
+    .container{ width:min(var(--container), calc(100% - 40px)); margin-inline:auto; }
+
+    /* Subtle background atmosphere */
+    body:before{
+      content:"";
+      position:fixed; inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(201,162,78,.10), transparent 45%),
+        radial-gradient(circle at 85% 18%, rgba(14,111,109,.08), transparent 45%),
+        radial-gradient(circle at 55% 110%, rgba(11,31,42,.10), transparent 55%);
+      opacity:.9;
+      z-index:-1;
+    }
+
+    /* Header / Nav */
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(246,242,234,.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(231,221,207,.85);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:10px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width:0;
+    }
+    .logoMark{
+      width:38px; height:38px; border-radius:14px;
+      background: radial-gradient(circle at 30% 30%, rgba(201,162,78,.35), transparent 55%),
+                  linear-gradient(135deg, var(--navy), #153748);
+      box-shadow: 0 14px 30px rgba(11,31,42,.18);
+      border: 1px solid rgba(255,255,255,.22);
+      position:relative;
+      overflow:hidden;
+      flex:0 0 auto;
+    }
+    .logoMark:after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: radial-gradient(circle, rgba(255,255,255,.25), transparent 60%);
+      transform: rotate(25deg);
+    }
+    .brand strong{ display:block; letter-spacing:.2px; }
+    .brand span{ display:block; font-size:12.5px; color:var(--muted); margin-top:1px; }
+
+    nav ul{
+      display:flex; align-items:center; gap:18px;
+      list-style:none; padding:0; margin:0;
+    }
+    nav a{
+      font-weight:900;
+      color: rgba(16,24,40,.9);
+      padding:8px 10px;
+      border-radius:999px;
+      transition: background .2s var(--ease), transform .2s var(--ease);
+    }
+    nav a:hover{
+      background: rgba(14,111,109,.08);
+      transform: translateY(-1px);
+    }
+    /* active link */
+    nav a[aria-current="page"]{
+      background: rgba(14,111,109,.10);
+      border: 1px solid rgba(14,111,109,.14);
+    }
+
+    .navRight{ display:flex; align-items:center; gap:10px; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:11px 14px;
+      border-radius:999px;
+      font-weight:950;
+      border:1px solid transparent;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
+      will-change: transform;
+      white-space:nowrap;
+      position:relative;
+      overflow:hidden;
+    }
+    .btn:focus{ outline: 3px solid rgba(14,111,109,.18); outline-offset: 2px; }
+
+    .btn:before{
+      content:"";
+      position:absolute;
+      top:-60%;
+      left:-40%;
+      width:40%;
+      height:220%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+      transform: rotate(20deg) translateX(-120%);
+      transition: transform .6s var(--ease);
+      pointer-events:none;
+    }
+    .btn:hover:before{ transform: rotate(20deg) translateX(420%); }
+
+    .btnPrimary{
+      background: linear-gradient(135deg, var(--navy), #143242);
+      color:#fff;
+      box-shadow: 0 14px 30px rgba(11,31,42,.16);
+    }
+    .btnPrimary:hover{ transform: translateY(-1px); box-shadow: 0 18px 40px rgba(11,31,42,.22); }
+
+    .btnOutline{
+      background: rgba(255,255,255,.72);
+      border-color: rgba(231,221,207,.95);
+      color: var(--navy);
+      box-shadow: 0 10px 24px rgba(11,31,42,.08);
+    }
+    .btnOutline:hover{ transform: translateY(-1px); box-shadow: 0 14px 30px rgba(11,31,42,.12); }
+
+    .btnWhatsapp{
+      background: linear-gradient(135deg, rgba(201,162,78,.26), rgba(201,162,78,.12));
+      border-color: rgba(201,162,78,.32);
+      color: var(--navy);
+      box-shadow: 0 10px 24px rgba(11,31,42,.08);
+    }
+    .btnWhatsapp:hover{ transform: translateY(-1px); box-shadow: 0 16px 34px rgba(11,31,42,.12); }
+
+    .icon{ width:18px; height:18px; flex:0 0 auto; }
+
+    .menuBtn{
+      display:none;
+      width:44px; height:44px;
+      border-radius:14px;
+      border:1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.74);
+      align-items:center; justify-content:center;
+      box-shadow: 0 10px 24px rgba(11,31,42,.08);
+      transition: transform .25s var(--ease);
+    }
+    .menuBtn:hover{ transform: translateY(-1px); }
+    .menuBtn svg{ width:20px; height:20px; }
+
+    /* Mobile menu (NO layout gap when closed) */
+    .mobilePanel{
+      display:none;
+      padding:0;
+      margin:0;
+    }
+    @media (max-width: 860px){
+      .mobilePanel{ display:block; }
+    }
+    .mobilePanelInner{
+      border:1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.78);
+      border-radius: var(--radius);
+      padding: 10px;
+      box-shadow: var(--shadow-soft);
+      overflow:hidden;
+
+      transform-origin: top;
+      transform: translateY(-6px) scaleY(.98);
+      opacity: 0;
+      max-height: 0;
+      transition: max-height .35s var(--ease), opacity .25s var(--ease), transform .35s var(--ease);
+    }
+    .mobilePanel.open{ padding: 10px 0 14px; }
+    .mobilePanel.open .mobilePanelInner{
+      opacity: 1;
+      transform: translateY(0) scaleY(1);
+      max-height: 420px;
+    }
+    .mobilePanel a{
+      display:block;
+      padding:12px 12px;
+      border-radius: 14px;
+      font-weight:950;
+      color: rgba(16,24,40,.92);
+    }
+    .mobilePanel a:hover{ background: rgba(14,111,109,.08); }
+
+    /* Page hero (About) */
+    .pageHero{ padding: 18px 0 12px; }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .heroCard{
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(231,221,207,.95);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .heroCard:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 24px 60px rgba(11,31,42,.14);
+    }
+    .heroCard::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(circle at 15% 18%, rgba(201,162,78,.22), transparent 50%),
+        radial-gradient(circle at 82% 20%, rgba(14,111,109,.18), transparent 46%),
+        linear-gradient(180deg, rgba(11,31,42,.06), transparent 45%),
+        radial-gradient(circle at 55% 120%, rgba(11,31,42,.12), transparent 55%);
+      pointer-events:none;
+    }
+    .heroInner{ position:relative; padding: 28px 22px 22px; }
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-weight:950;
+      color: var(--navy);
+      letter-spacing: .2px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(14,111,109,.08);
+      border: 1px solid rgba(14,111,109,.14);
+      margin-bottom: 12px;
+    }
+    .kicker .dot{
+      width:9px; height:9px; border-radius:99px;
+      background: var(--teal);
+      box-shadow: 0 0 0 6px rgba(14,111,109,.10);
+    }
+
+    h1{
+      margin:0;
+      font-size: clamp(28px, 3.0vw, 42px);
+      line-height: 1.08;
+      letter-spacing: -0.6px;
+      color: var(--navy);
+    }
+    .sub{
+      margin: 12px 0 18px;
+      color: var(--muted);
+      font-size: 16.5px;
+      max-width: 62ch;
+    }
+
+    .crumbs{
+      display:flex; flex-wrap:wrap; gap:8px; align-items:center;
+      margin-top: 14px;
+      color: rgba(71,84,103,.95);
+      font-weight:800;
+      font-size: 13.5px;
+    }
+    .crumbs a{
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 10px 22px rgba(11,31,42,.06);
+      transition: transform .2s var(--ease);
+    }
+    .crumbs a:hover{ transform: translateY(-1px); }
+    .crumbs .sep{ opacity:.65; }
+
+    /* Sections */
+    section{ padding: 30px 0; }
+    .sectionHead{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
+      margin-bottom: 16px;
+    }
+    .sectionHead h2{ margin:0; font-size: 24px; letter-spacing: -.3px; color: var(--navy); font-weight:950; }
+    .sectionHead p{ margin:0; color: var(--muted); max-width: 64ch; }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .big{
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at 15% 22%, rgba(201,162,78,.18), transparent 52%),
+        radial-gradient(circle at 78% 30%, rgba(14,111,109,.12), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.88));
+      border: 1px solid rgba(231,221,207,.95);
+      box-shadow: var(--shadow);
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .big:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 24px 60px rgba(11,31,42,.14);
+    }
+    .big h3{ margin:0 0 10px; color: var(--navy); letter-spacing:-.2px; font-weight:950; }
+    .big p{ margin:0; color: var(--muted); }
+
+    .bullets{
+      margin: 12px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid; gap:10px;
+    }
+    .bullets li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding: 12px 12px;
+      border-radius: 16px;
+      border:1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.78);
+      box-shadow: 0 10px 22px rgba(11,31,42,.06);
+    }
+    .check{
+      width:22px; height:22px; border-radius: 8px;
+      background: rgba(14,111,109,.10);
+      border:1px solid rgba(14,111,109,.16);
+      display:flex; align-items:center; justify-content:center;
+      flex:0 0 auto;
+      margin-top:1px;
+    }
+    .check svg{ width:14px; height:14px; }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      background: var(--surface);
+      border: 1px solid rgba(231,221,207,.95);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      overflow:hidden;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 18px 42px rgba(11,31,42,.12);
+    }
+    .cardPad{ padding: 16px; }
+    .card h3{ margin: 0 0 6px; color: var(--navy); letter-spacing:-.2px; font-size: 16.5px; font-weight:950; }
+    .card p{ margin:0; color: var(--muted); font-size: 14.5px; }
+    .pillRow{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 12px; }
+    .softPill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(14,111,109,.08);
+      border:1px solid rgba(14,111,109,.14);
+      font-weight: 900;
+      color: rgba(16,24,40,.92);
+      font-size: 13.5px;
+    }
+    .softPill svg{ width:16px; height:16px; }
+
+    /* FAQ */
+    .faq{ display:grid; gap: 10px; }
+    details{
+      background: rgba(255,255,255,.88);
+      border:1px solid rgba(231,221,207,.95);
+      border-radius: 16px;
+      box-shadow: 0 10px 26px rgba(11,31,42,.06);
+      overflow:hidden;
+      transition: transform .25s var(--ease);
+    }
+    details:hover{ transform: translateY(-1px); }
+    summary{
+      cursor:pointer;
+      padding: 14px 14px;
+      list-style:none;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      font-weight:950;
+      color: var(--navy);
+    }
+    summary::-webkit-details-marker{ display:none; }
+    .faqBody{ padding: 0 14px 14px; color: var(--muted); font-size: 14.5px; }
+    .chev{ width:18px; height:18px; transition: transform .25s var(--ease); }
+    details[open] .chev{ transform: rotate(180deg); }
+
+    /* CTA band */
+    .ctaBand{
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(231,221,207,.95);
+      background:
+        radial-gradient(circle at 12% 18%, rgba(14,111,109,.16), transparent 55%),
+        radial-gradient(circle at 86% 26%, rgba(201,162,78,.18), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.84));
+      box-shadow: var(--shadow);
+      padding: 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      flex-wrap:wrap;
+    }
+    .ctaBand h3{ margin:0; color: var(--navy); letter-spacing:-.2px; font-weight:950; }
+    .ctaBand p{ margin: 6px 0 0; color: var(--muted); }
+
+    /* Footer */
+    footer{
+      margin-top: 18px;
+      background: linear-gradient(180deg, rgba(11,31,42,.06), rgba(11,31,42,.00));
+      border-top: 1px solid rgba(231,221,207,.9);
+      padding: 30px 0;
+    }
+    .footGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr .8fr;
+      gap: 14px;
+      align-items:start;
+    }
+    .foot h4{ margin:0 0 10px; color: var(--navy); letter-spacing:-.2px; font-weight:950; }
+    .foot p, .foot a{ color: var(--muted); font-size: 14.5px; }
+    .foot a:hover{ color: var(--navy); }
+    .foot ul{ list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+    .copyright{
+      margin-top: 14px;
+      color: rgba(71,84,103,.9);
+      font-size: 13px;
+    }
+
+    /* Floating WhatsApp */
+    .waFloat{
+      position:fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 60;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .waBubble{
+      display:block;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.92);
+      border:1px solid rgba(231,221,207,.95);
+      box-shadow: 0 16px 34px rgba(11,31,42,.12);
+      color: var(--navy);
+      font-weight:950;
+      font-size: 13px;
+      white-space:nowrap;
+      transform: translateY(0);
+      transition: transform .25s var(--ease);
+    }
+    .waBtn{
+      width: 56px; height:56px;
+      border-radius: 20px;
+      display:flex; align-items:center; justify-content:center;
+      background: linear-gradient(135deg, rgba(201,162,78,.35), rgba(201,162,78,.14));
+      border: 1px solid rgba(201,162,78,.32);
+      box-shadow: 0 18px 40px rgba(11,31,42,.16);
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+      position:relative;
+    }
+    .waBtn:after{
+      content:"";
+      position:absolute;
+      inset:-8px;
+      border-radius: 24px;
+      border: 2px solid rgba(201,162,78,.25);
+      opacity:.0;
+      transform: scale(.95);
+      animation: pulse 2.2s var(--ease) infinite;
+      pointer-events:none;
+    }
+    .waBtn:hover{ transform: translateY(-2px); box-shadow: 0 22px 50px rgba(11,31,42,.22); }
+    .waBtn:hover + .waBubble{ transform: translateY(-2px); }
+    .waBtn svg{ width:24px; height:24px; }
+
+    @keyframes pulse{
+      0%{ opacity:0; transform: scale(.92); }
+      15%{ opacity:.75; }
+      55%{ opacity:0; transform: scale(1.06); }
+      100%{ opacity:0; transform: scale(1.06); }
+    }
+
+    /* Reveal */
+    .reveal{
+      opacity:0;
+      transform: translateY(14px);
+      transition: opacity .6s var(--ease), transform .6s var(--ease);
+      will-change: opacity, transform;
+    }
+    .reveal.in{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .footGrid{ grid-template-columns: 1fr; }
+      .grid3{ grid-template-columns: 1fr; }
+      .grid2{ grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 860px){
+      .container{ width: calc(100% - 28px); }
+      nav ul{ display:none; }
+      .menuBtn{ display:inline-flex; }
+      .heroInner{ padding: 24px 16px 18px; }
+      .logoMark{ width:34px; height:34px; border-radius:12px; }
+      .btn{ padding:10px 12px; }
+    }
+
+    @media (max-width: 520px){
+      .brand span{ display:none; }
+      .navRight .btnOutline{ display:none; }
+      .waBubble{ display:none; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ scroll-behavior:auto !important; }
+      .reveal{ transition:none; transform:none; opacity:1; }
+      .btn, .waBtn, nav a, .card, .big, .heroCard{ transition:none; }
+      .waBtn:after{ animation:none; }
+    }
+  </style>
+
+  <!-- Schema: AboutPage + LodgingBusiness (keep simple and accurate) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"AboutPage",
+    "name":"About Beach View Stays",
+    "url":"https://beachviewstays.pk/about.html",
+    "about":{
+      "@type":"LodgingBusiness",
+      "name":"Beach View Stays",
+      "url":"https://beachviewstays.pk/",
+      "telephone":"+923068230101",
+      "email":"karachi.apartments@gmail.com",
+      "address":{
+        "@type":"PostalAddress",
+        "addressLocality":"DHA",
+        "addressRegion":"Karachi",
+        "addressCountry":"PK"
+      },
+      "numberOfRooms":"5"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="index.html" aria-label="Beach View Stays Home">
+          <div class="logoMark" aria-hidden="true"></div>
+          <div>
+            <strong>Beach View Stays</strong>
+            <span>Relax. Stay. Enjoy the View.</span>
+          </div>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="navRight">
+          <a class="btn btnOutline" href="contact.html" aria-label="Check availability">Check Availability</a>
+          <a class="btn btnWhatsapp" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.5 3.5A11 11 0 0 0 3.7 17.7L3 21l3.4-.7A11 11 0 0 0 20.5 3.5ZM12 20a9 9 0 0 1-4.6-1.3l-.3-.2-2 .4.4-2-.2-.3A9 9 0 1 1 12 20Z"/></svg>
+            WhatsApp Booking
+          </a>
+          <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 7h16v2H4zm0 8h16v2H4zm0-4h16v2H4z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobilePanel" id="mobilePanel" aria-hidden="true">
+        <div class="mobilePanelInner">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="facilities.html">Facilities</a>
+          <a href="contact.html">Contact</a>
+          <div style="padding:10px;">
+            <a class="btn btnPrimary" style="width:100%;" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">
+              Book on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="pageHero">
+      <div class="container">
+        <div class="heroGrid">
+          <div class="heroCard reveal" data-delay="0">
+            <div class="heroInner">
+              <div class="kicker"><span class="dot" aria-hidden="true"></span> About Beach View Stays</div>
+              <h1>Privacy of an apartment. Cleanliness of a hotel.</h1>
+              <p class="sub">
+                We offer premium <strong>1-bedroom serviced apartments</strong> in DHA Karachi near the beach—quiet, secure, fully furnished, and maintained with hotel-level standards.
+              </p>
+
+              <div class="heroActions">
+                <a class="btn btnPrimary" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">Ask availability on WhatsApp</a>
+                <a class="btn btnOutline" href="gallery.html">See photos</a>
+              </div>
+
+              <div class="crumbs" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep">›</span>
+                <span>About</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="heroCard reveal" data-delay="90" aria-label="What we focus on">
+            <div class="heroInner">
+              <div class="kicker"><span class="dot" aria-hidden="true"></span> What we focus on</div>
+              <ul class="bullets" aria-label="Focus points">
+                <li>
+                  <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
+                  <div><strong>Consistent cleanliness</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Housekeeping support + neat interiors.</div></div>
+                </li>
+                <li>
+                  <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
+                  <div><strong>Peaceful & secure stay</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Calm environment in DHA Karachi.</div></div>
+                </li>
+                <li>
+                  <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
+                  <div><strong>Fast booking</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">WhatsApp confirmation in minutes.</div></div>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY + DETAILS -->
+    <section>
+      <div class="container">
+        <div class="sectionHead reveal" data-delay="0">
+          <div>
+            <h2>What makes us different</h2>
+            <p>We keep it simple: privacy, comfort, and a stay that feels premium without being complicated.</p>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div class="big reveal" data-delay="0">
+            <h3>Serviced apartments — done properly</h3>
+            <p>
+              Beach View Stays is built for guests who want more space than a hotel room. You get a private 1-bedroom apartment
+              with a lounge and kitchen/kitchenette—plus serviced support to keep things smooth.
+            </p>
+            <div class="pillRow" style="margin-top:12px;">
+              <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 21h10a2 2 0 0 0 2-2V9l-7-6-7 6v10a2 2 0 0 0 2 2Z"/></svg> 1-bedroom units</span>
+              <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 4h12v2H6V4Zm-2 6h16v10H4V10Z"/></svg> Lounge space</span>
+              <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 6h16v12H4z"/></svg> Smart TV</span>
+            </div>
+          </div>
+
+          <div class="big reveal" data-delay="120">
+            <h3>Location: DHA Karachi, near the beach</h3>
+            <p>
+              Convenient access to DHA and nearby beach areas—ideal for families, tourists, and guests who want a calm base while staying connected to the city.
+            </p>
+            <ul class="bullets" aria-label="Location points">
+              <li>
+                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
+                <div><strong>DHA Karachi</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Secure, accessible, peaceful.</div></div>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
+                <div><strong>Near beach areas</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Great for short breaks and tourism.</div></div>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
+                <div><strong>Quick WhatsApp booking</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Send dates + guests, get a fast reply.</div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section>
+      <div class="container">
+        <div class="sectionHead reveal" data-delay="0">
+          <div>
+            <h2>Stay standards</h2>
+            <p>Everything important is covered—without overpromising.</p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <div class="card reveal" data-delay="0">
+            <div class="cardPad">
+              <h3>Comfort & space</h3>
+              <p>1-bedroom apartment layout with lounge and kitchen/kitchenette.</p>
+              <div class="pillRow">
+                <span class="softPill"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 21h10a2 2 0 0 0 2-2V9l-7-6-7 6v10a2 2 0 0 0 2 2Z"/></svg> Private unit</span>
+                <span class="softPill"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 6h16v12H4z"/></svg> Smart TV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal" data-delay="90">
+            <div class="cardPad">
+              <h3>Utilities that work</h3>
+              <p>High-speed Wi-Fi, AC, 24/7 sweet water, and electric geyser.</p>
+              <div class="pillRow">
+                <span class="softPill"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Z"/></svg> AC</span>
+                <span class="softPill"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 6h16v12H4z"/></svg> Wi-Fi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal" data-delay="180">
+            <div class="cardPad">
+              <h3>Clean & secure</h3>
+              <p>Family-friendly and tourist friendly, with housekeeping support.</p>
+              <div class="pillRow">
+                <span class="softPill"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 2 7v6c0 5 3.8 9.4 10 11 6.2-1.6 10-6 10-11V7L12 2Z"/></svg> Secure</span>
+                <span class="softPill"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M16 2H8v2H5v2h14V4h-3V2Z"/></svg> Housekeeping</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (short) -->
+    <section>
+      <div class="container">
+        <div class="sectionHead reveal" data-delay="0">
+          <div>
+            <h2>Quick answers</h2>
+            <p>So guests can decide fast.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <details class="reveal" data-delay="0">
+            <summary>
+              Do you offer daily or short stays?
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
+            </summary>
+            <div class="faqBody">Yes. Share your check-in/check-out dates on WhatsApp for quick availability and rates.</div>
+          </details>
+
+          <details class="reveal" data-delay="90">
+            <summary>
+              Is it family-friendly?
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
+            </summary>
+            <div class="faqBody">Yes. It’s secure, peaceful, and designed for families and tourists.</div>
+          </details>
+
+          <details class="reveal" data-delay="180">
+            <summary>
+              What should I send for booking?
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
+            </summary>
+            <div class="faqBody">Send dates + number of guests. We’ll confirm availability and booking steps.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="container">
+        <div class="ctaBand reveal" data-delay="0">
+          <div>
+            <h3>Want availability for your dates?</h3>
+            <p>WhatsApp is the fastest route. Share dates + guests and get a quick reply.</p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btnPrimary" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">Book on WhatsApp</a>
+            <a class="btn btnOutline" href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footGrid">
+        <div class="foot">
+          <h4>Beach View Stays</h4>
+          <p>Premium serviced 1-bedroom apartments near the beach in DHA Karachi—comfort, privacy, and hotel-level cleanliness.</p>
+          <p style="margin-top:10px;">
+            <strong style="color:var(--navy);">Email:</strong> <a href="mailto:karachi.apartments@gmail.com">karachi.apartments@gmail.com</a><br/>
+            <strong style="color:var(--navy);">WhatsApp:</strong> <a href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">+92 306 8230101</a>
+          </p>
+        </div>
+
+        <div class="foot">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="foot">
+          <h4>Location</h4>
+          <p>DHA, Karachi, Pakistan<br/>Near beach areas • Clifton/DHA access</p>
+          <p style="margin-top:10px;">
+            Socials (placeholders):<br/>
+            <a href="#" aria-label="Facebook">Facebook</a> •
+            <a href="#" aria-label="Instagram">Instagram</a> •
+            <a href="#" aria-label="Google Maps">Maps</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> Beach View Stays. All rights reserved. • Canonical: https://beachviewstays.pk
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="waFloat" aria-label="WhatsApp quick booking">
+    <a class="waBtn" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp booking">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="var(--navy)" d="M20.5 3.5A11 11 0 0 0 3.7 17.7L3 21l3.4-.7A11 11 0 0 0 20.5 3.5ZM12 20a9 9 0 0 1-4.6-1.3l-.3-.2-2 .4.4-2-.2-.3A9 9 0 1 1 12 20Zm5.2-6.7c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-1 .9-.4.1-.7 0a7.4 7.4 0 0 1-2.2-1.4A8.2 8.2 0 0 1 9 9.9c-.1-.3 0-.5.1-.6l.5-.6c.1-.2.1-.4 0-.6l-.9-2.1c-.1-.3-.3-.3-.5-.3h-.5c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.4 2.4 3.7 5.8 5.2c.8.3 1.4.5 1.9.6.8.2 1.6.2 2.2.1.7-.1 1.7-.7 1.9-1.4s.2-1.3.1-1.4c0-.2-.3-.3-.6-.4Z"/>
+      </svg>
+    </a>
+    <div class="waBubble">Book on WhatsApp</div>
+  </div>
+
+  <script>
+    (function(){
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Mobile menu
+      const btn = document.getElementById('menuBtn');
+      const panel = document.getElementById('mobilePanel');
+
+      if(btn && panel){
+        const close = () => {
+          btn.setAttribute('aria-expanded','false');
+          panel.classList.remove('open');
+          panel.setAttribute('aria-hidden','true');
+        };
+
+        close();
+
+        btn.addEventListener('click', () => {
+          const open = panel.classList.contains('open');
+          if(open) close();
+          else{
+            btn.setAttribute('aria-expanded','true');
+            panel.classList.add('open');
+            panel.setAttribute('aria-hidden','false');
+          }
+        });
+
+        document.addEventListener('click', (e) => {
+          if(!panel.classList.contains('open')) return;
+          const within = panel.contains(e.target) || btn.contains(e.target);
+          if(!within) close();
+        });
+
+        window.addEventListener('resize', () => {
+          if(window.innerWidth > 860) close();
+        });
+      }
+
+      // Scroll reveal
+      const els = Array.from(document.querySelectorAll('.reveal'));
+      if(reduce){
+        els.forEach(el => el.classList.add('in'));
+      } else {
+        els.forEach(el => {
+          const d = el.getAttribute('data-delay');
+          if(d) el.style.transitionDelay = (parseInt(d,10) || 0) + 'ms';
+        });
+
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if(entry.isIntersecting){
+              entry.target.classList.add('in');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        els.forEach(el => io.observe(el));
+      }
+    })();
+  </script>
+</body>
+</html>
