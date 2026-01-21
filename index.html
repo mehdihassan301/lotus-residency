@@ -9,11 +9,12 @@
   <meta name="description" content="Relax. Stay. Enjoy the View. Beach View Stays offers premium serviced 1-bedroom apartments near the beach in DHA Karachi—secure, family-friendly, fully furnished, Wi-Fi, housekeeping, and short stays." />
   <link rel="canonical" href="https://beachviewstays.pk/" />
   <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0B1F2A" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Beach View Stays | Premium Serviced Apartments in DHA Karachi" />
-  <meta property="og:description" content="Premium serviced 1-bedroom apartments near the beach in DHA Karachi—comfort, privacy, and hotel-level cleanliness. Book instantly on WhatsApp." />
+  <meta property="og:description" content="Premium serviced 1-bedroom apartments near the beach in DHA Karachi. Book instantly on WhatsApp." />
   <meta property="og:url" content="https://beachviewstays.pk/" />
   <meta property="og:image" content="https://beachviewstays.pk/og-home.jpg" />
 
@@ -23,11 +24,9 @@
   <meta name="twitter:description" content="Premium serviced 1-bedroom apartments near the beach in DHA Karachi. Book instantly on WhatsApp." />
   <meta name="twitter:image" content="https://beachviewstays.pk/og-home.jpg" />
 
-  <meta name="theme-color" content="#0B1F2A" />
-
   <style>
     :root{
-      /* Coastal Luxury (hospitality) */
+      /* Coastal Luxury (Hospitality) — NOT Hotel7Seven colors */
       --navy:#0B1F2A;
       --teal:#0E6F6D;
       --gold:#C9A24E;
@@ -66,7 +65,7 @@
     img{ max-width:100%; height:auto; display:block; }
     .container{ width:min(var(--container), calc(100% - 40px)); margin-inline:auto; }
 
-    /* Subtle background atmosphere */
+    /* Subtle background wash */
     body:before{
       content:"";
       position:fixed; inset:0;
@@ -75,26 +74,23 @@
         radial-gradient(circle at 15% 10%, rgba(201,162,78,.10), transparent 45%),
         radial-gradient(circle at 85% 18%, rgba(14,111,109,.08), transparent 45%),
         radial-gradient(circle at 55% 110%, rgba(11,31,42,.10), transparent 55%);
-      opacity:.9;
+      opacity:.95;
       z-index:-1;
     }
 
-    /* Header / Nav */
+    /* Header / Nav (tight, no top strip) */
     header{
       position:sticky; top:0; z-index:50;
-      background: rgba(246,242,234,.88);
+      background: rgba(246,242,234,.90);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(231,221,207,.85);
     }
     .nav{
       display:flex; align-items:center; justify-content:space-between;
-      padding:10px 0; /* tighter */
-      gap:14px;
+      padding: 10px 0; /* tight gap */
+      gap:12px;
     }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      min-width:0;
-    }
+    .brand{ display:flex; align-items:center; gap:12px; min-width:0; }
     .logoMark{
       width:38px; height:38px; border-radius:14px;
       background: radial-gradient(circle at 30% 30%, rgba(201,162,78,.35), transparent 55%),
@@ -111,11 +107,12 @@
       background: radial-gradient(circle, rgba(255,255,255,.25), transparent 60%);
       transform: rotate(25deg);
     }
+    .brandText{ min-width:0; }
     .brand strong{ display:block; letter-spacing:.2px; }
     .brand span{ display:block; font-size:12.5px; color:var(--muted); margin-top:1px; }
 
     nav ul{
-      display:flex; align-items:center; gap:18px;
+      display:flex; align-items:center; gap:14px;
       list-style:none; padding:0; margin:0;
     }
     nav a{
@@ -125,12 +122,14 @@
       border-radius:999px;
       transition: background .2s var(--ease), transform .2s var(--ease);
     }
-    nav a:hover{
-      background: rgba(14,111,109,.08);
-      transform: translateY(-1px);
+    nav a:hover{ background: rgba(14,111,109,.08); transform: translateY(-1px); }
+    nav a[aria-current="page"]{
+      background: rgba(201,162,78,.14);
+      border: 1px solid rgba(201,162,78,.28);
     }
 
     .navRight{ display:flex; align-items:center; gap:10px; }
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
       padding:11px 14px;
@@ -144,8 +143,6 @@
       overflow:hidden;
     }
     .btn:focus{ outline: 3px solid rgba(14,111,109,.18); outline-offset: 2px; }
-
-    /* Button shine effect */
     .btn:before{
       content:"";
       position:absolute;
@@ -168,7 +165,7 @@
     .btnPrimary:hover{ transform: translateY(-1px); box-shadow: 0 18px 40px rgba(11,31,42,.22); }
 
     .btnOutline{
-      background: rgba(255,255,255,.72);
+      background: rgba(255,255,255,.78);
       border-color: rgba(231,221,207,.95);
       color: var(--navy);
       box-shadow: 0 10px 24px rgba(11,31,42,.08);
@@ -185,7 +182,7 @@
 
     .icon{ width:18px; height:18px; flex:0 0 auto; }
 
-    /* Mobile menu button */
+    /* Mobile menu */
     .menuBtn{
       display:none;
       width:44px; height:44px;
@@ -199,35 +196,24 @@
     .menuBtn:hover{ transform: translateY(-1px); }
     .menuBtn svg{ width:20px; height:20px; }
 
-    /* Mobile menu (NO layout gap when closed) */
-    .mobilePanel{
-      display:none;   /* hidden on desktop */
-      padding:0;
-      margin:0;
-    }
-    @media (max-width: 860px){
-      .mobilePanel{ display:block; }
-    }
-
+    .mobilePanel{ padding: 0 0 14px; }
     .mobilePanelInner{
       border:1px solid rgba(231,221,207,.95);
-      background: rgba(255,255,255,.78);
+      background: rgba(255,255,255,.80);
       border-radius: var(--radius);
       padding: 10px;
       box-shadow: var(--shadow-soft);
       overflow:hidden;
-
       transform-origin: top;
       transform: translateY(-6px) scaleY(.98);
       opacity: 0;
       max-height: 0;
       transition: max-height .35s var(--ease), opacity .25s var(--ease), transform .35s var(--ease);
     }
-    .mobilePanel.open{ padding: 10px 0 14px; } /* spacing only when open */
     .mobilePanel.open .mobilePanelInner{
       opacity: 1;
       transform: translateY(0) scaleY(1);
-      max-height: 420px;
+      max-height: 460px;
     }
     .mobilePanel a{
       display:block;
@@ -238,43 +224,45 @@
     }
     .mobilePanel a:hover{ background: rgba(14,111,109,.08); }
 
-    /* Hero */
-    .hero{ padding: 18px 0 12px; } /* tighter */
+    /* Main */
+    main{ padding: 22px 0 36px; }
+    section{ padding: 16px 0; }
+
+    /* Hero — visual-first, minimal copy */
     .heroGrid{
       display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 18px;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 14px;
       align-items: stretch;
     }
 
-    .heroCard{
+    .card{
       border-radius: var(--radius-lg);
       border: 1px solid rgba(231,221,207,.95);
-      background: var(--surface);
+      background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.86));
       box-shadow: var(--shadow);
       overflow:hidden;
       position:relative;
       transition: transform .35s var(--ease), box-shadow .35s var(--ease);
     }
-    .heroCard:hover{
+    .card:hover{
       transform: translateY(-2px);
       box-shadow: 0 24px 60px rgba(11,31,42,.14);
     }
-    .heroCard::before{
+    .card:before{
       content:"";
       position:absolute; inset:-2px;
       background:
-        radial-gradient(circle at 15% 18%, rgba(201,162,78,.22), transparent 50%),
-        radial-gradient(circle at 82% 20%, rgba(14,111,109,.18), transparent 46%),
-        linear-gradient(180deg, rgba(11,31,42,.06), transparent 45%),
-        radial-gradient(circle at 55% 120%, rgba(11,31,42,.12), transparent 55%);
+        radial-gradient(circle at 14% 22%, rgba(14,111,109,.16), transparent 52%),
+        radial-gradient(circle at 86% 18%, rgba(201,162,78,.18), transparent 55%),
+        radial-gradient(circle at 52% 120%, rgba(11,31,42,.12), transparent 55%);
       pointer-events:none;
     }
-    .heroInner{ position:relative; padding: 28px 22px 22px; }
+    .cardInner{ position:relative; padding: 18px; }
 
     .kicker{
       display:inline-flex; align-items:center; gap:10px;
-      font-weight:950;
+      font-weight:900;
       color: var(--navy);
       letter-spacing: .2px;
       padding: 8px 12px;
@@ -291,203 +279,315 @@
 
     h1{
       margin:0;
-      font-size: clamp(30px, 3.2vw, 46px);
+      font-size: clamp(28px, 3.2vw, 46px);
       line-height: 1.06;
       letter-spacing: -0.7px;
       color: var(--navy);
     }
     .sub{
-      margin: 12px 0 18px;
+      margin: 10px 0 0;
       color: var(--muted);
-      font-size: 16.5px;
+      font-size: 15.5px;
       max-width: 62ch;
+      font-weight: 700;
     }
 
-    .heroActions{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top: 6px;
-    }
-    .heroMeta{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top: 18px;
-      color: var(--muted);
-      font-weight:800;
-      font-size: 13.5px;
-    }
-    .metaPill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding: 9px 11px;
+    .heroActions{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 14px; }
+
+    .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top: 14px; }
+    .chip{
+      border: 1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.78);
+      color: rgba(16,24,40,.92);
+      font-weight:900;
+      font-size: 13px;
+      padding: 9px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,.74);
-      border:1px solid rgba(231,221,207,.95);
       box-shadow: 0 10px 22px rgba(11,31,42,.06);
     }
-    .metaPill svg{ width:16px; height:16px; }
 
-    /* Side card */
-    .sideCard{
-      padding: 18px;
-      display:flex; flex-direction:column; gap:12px;
-      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.84));
+    /* Hero image block */
+    .heroMedia{
+      position:relative;
+      min-height: 320px;
+      border-radius: var(--radius-lg);
+      overflow:hidden;
+      border: 1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.55);
+      box-shadow: var(--shadow);
     }
-    .sideTitle{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .heroMedia:before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(201,162,78,.18), transparent 55%),
+        radial-gradient(circle at 70% 40%, rgba(14,111,109,.12), transparent 58%),
+        linear-gradient(180deg, rgba(11,31,42,.08), rgba(11,31,42,.00));
+      pointer-events:none;
+      z-index:1;
+    }
+    .heroImg{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      object-fit: cover;
+      filter: saturate(1.05) contrast(1.02);
+      transform: scale(1.02);
+      transition: transform .9s var(--ease);
+    }
+    .heroMedia:hover .heroImg{ transform: scale(1.06); }
+
+    .mediaOverlay{
+      position:absolute;
+      inset:auto 14px 14px 14px;
+      z-index:2;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
     .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(11,31,42,.55);
+      color: rgba(255,255,255,.95);
+      font-weight: 900;
+      font-size: 13px;
+      backdrop-filter: blur(10px);
+    }
+    .badge b{ color: #fff; }
+    .badge svg{ width:16px; height:16px; }
+
+    .miniPanel{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .miniStat{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.86);
+      border: 1px solid rgba(231,221,207,.95);
+      box-shadow: 0 10px 22px rgba(11,31,42,.10);
+      font-weight: 900;
+      font-size: 13px;
+      color: rgba(16,24,40,.92);
+    }
+    .miniStat svg{ width:16px; height:16px; }
+
+    /* Availability widget (WhatsApp prefill) */
+    .widget{
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.82);
+      box-shadow: var(--shadow-soft);
+      overflow:hidden;
+    }
+    .widgetTop{
+      padding: 14px 16px;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      border-bottom: 1px solid rgba(231,221,207,.85);
+      background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.86));
+    }
+    .widgetTop strong{
+      color: var(--navy);
+      letter-spacing: -.2px;
+      font-size: 15.5px;
+    }
+    .pill{
       display:inline-flex; align-items:center; gap:8px;
       padding: 8px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(201,162,78,.32);
+      border: 1px solid rgba(201,162,78,.30);
       background: rgba(201,162,78,.14);
-      font-weight:950;
+      font-weight: 900;
       color: var(--navy);
-      font-size: 13px;
+      font-size: 12.5px;
       white-space:nowrap;
     }
-    .sideCard h2{ margin:0; font-size: 18px; letter-spacing:-.2px; color: var(--navy); }
-    .sideCard p{ margin:0; color: var(--muted); font-size: 14.5px; }
-
-    .featureList{ display:grid; gap:10px; margin-top: 6px; }
-    .feat{
-      display:flex; gap:10px; align-items:flex-start;
+    .widgetBody{ padding: 14px 16px 16px; }
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    label{
+      display:block;
+      font-size: 12.5px;
+      font-weight: 900;
+      color: rgba(16,24,40,.88);
+      margin-bottom: 6px;
+    }
+    input, select{
+      width:100%;
       padding: 12px 12px;
-      border-radius: 16px;
-      border:1px solid rgba(231,221,207,.95);
-      background: rgba(255,255,255,.82);
+      border-radius: 14px;
+      border: 1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.92);
+      color: var(--text);
+      font-weight: 800;
+      outline: none;
+      transition: box-shadow .2s var(--ease), transform .2s var(--ease);
+    }
+    input:focus, select:focus{
+      box-shadow: 0 0 0 4px rgba(14,111,109,.14);
+    }
+    .widgetActions{
+      margin-top: 10px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .note{
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    /* Feature tiles (minimal text) */
+    .sectionHead{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin: 6px 0 10px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-size: 20px;
+      letter-spacing:-.3px;
+      color: var(--navy);
+    }
+    .sectionHead p{
+      margin:0;
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 13.5px;
+      max-width: 60ch;
+    }
+
+    .tiles{
+      display:grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+    }
+    .tile{
+      border-radius: 18px;
+      border: 1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.84);
+      box-shadow: 0 10px 26px rgba(11,31,42,.06);
+      padding: 12px 12px;
+      display:flex;
+      gap:10px;
+      align-items:center;
       transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+      min-height: 62px;
     }
-    .feat:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 14px 32px rgba(11,31,42,.10);
+    .tile:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 18px 42px rgba(11,31,42,.10);
     }
-    .feat .i{
-      width:34px; height:34px; border-radius: 14px;
+    .tile .i{
+      width:38px; height:38px;
+      border-radius: 16px;
       background: rgba(14,111,109,.10);
-      border:1px solid rgba(14,111,109,.14);
+      border: 1px solid rgba(14,111,109,.14);
       display:flex; align-items:center; justify-content:center;
       flex:0 0 auto;
     }
-    .feat .i svg{ width:18px; height:18px; }
-    .feat strong{ display:block; color: var(--navy); font-weight:950; }
-    .feat span{ display:block; color: var(--muted); font-size: 13.5px; margin-top:2px; }
-
-    /* Sections */
-    section{ padding: 30px 0; }
-    .sectionHead{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
-      margin-bottom: 16px;
+    .tile .i svg{ width:18px; height:18px; }
+    .tile strong{
+      font-size: 13.5px;
+      letter-spacing: -.1px;
+      color: rgba(16,24,40,.92);
     }
-    .sectionHead h2{ margin:0; font-size: 24px; letter-spacing: -.3px; color: var(--navy); }
-    .sectionHead p{ margin:0; color: var(--muted); max-width: 64ch; }
 
+    /* Three cards (no paragraphs) */
     .grid3{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      gap: 12px;
     }
-    .card{
-      background: var(--surface);
-      border: 1px solid rgba(231,221,207,.95);
+    .miniCard{
       border-radius: var(--radius);
+      border: 1px solid rgba(231,221,207,.95);
+      background: rgba(255,255,255,.86);
       box-shadow: var(--shadow-soft);
-      overflow:hidden;
-      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+      padding: 14px;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+      min-height: 120px;
     }
-    .card:hover{
+    .miniCard:hover{
       transform: translateY(-2px);
       box-shadow: 0 18px 42px rgba(11,31,42,.12);
     }
-    .cardPad{ padding: 16px; }
-    .card h3{ margin: 0 0 6px; color: var(--navy); letter-spacing:-.2px; font-size: 16.5px; font-weight:950; }
-    .card p{ margin:0; color: var(--muted); font-size: 14.5px; }
-
-    .pillRow{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 12px; }
-    .softPill{
+    .miniCardTop{
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      margin-bottom: 10px;
+    }
+    .miniCardTop .cap{
       display:inline-flex; align-items:center; gap:8px;
-      padding: 10px 12px;
+      padding: 8px 10px;
       border-radius: 999px;
-      background: rgba(14,111,109,.08);
-      border:1px solid rgba(14,111,109,.14);
-      font-weight: 900;
-      color: rgba(16,24,40,.92);
-      font-size: 13.5px;
-    }
-    .softPill svg{ width:16px; height:16px; }
-
-    /* Split block */
-    .split{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    .big{
-      padding: 18px;
-      border-radius: var(--radius-lg);
-      background:
-        radial-gradient(circle at 15% 22%, rgba(201,162,78,.18), transparent 52%),
-        radial-gradient(circle at 78% 30%, rgba(14,111,109,.12), transparent 55%),
-        linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.88));
       border: 1px solid rgba(231,221,207,.95);
-      box-shadow: var(--shadow);
-      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+      background: rgba(255,255,255,.78);
+      font-weight: 900;
+      font-size: 12.5px;
+      color: rgba(16,24,40,.92);
     }
-    .big:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 24px 60px rgba(11,31,42,.14);
+    .miniCardTop .cap svg{ width:16px; height:16px; }
+    .miniCard h3{
+      margin:0;
+      font-size: 16px;
+      letter-spacing:-.2px;
+      color: var(--navy);
     }
-    .big h3{ margin:0 0 10px; color: var(--navy); letter-spacing:-.2px; font-weight:950; }
-    .big p{ margin:0; color: var(--muted); }
-
-    .bullets{
-      margin: 12px 0 0;
+    .miniBullets{
+      margin: 10px 0 0;
       padding:0;
       list-style:none;
-      display:grid; gap:10px;
+      display:grid;
+      gap:8px;
     }
-    .bullets li{
-      display:flex; gap:10px; align-items:flex-start;
-      padding: 12px 12px;
-      border-radius: 16px;
-      border:1px solid rgba(231,221,207,.95);
-      background: rgba(255,255,255,.78);
-      box-shadow: 0 10px 22px rgba(11,31,42,.06);
+    .miniBullets li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      font-weight: 800;
+      color: var(--muted);
+      font-size: 13.5px;
     }
     .check{
-      width:22px; height:22px; border-radius: 8px;
+      width:22px; height:22px;
+      border-radius: 8px;
       background: rgba(14,111,109,.10);
       border:1px solid rgba(14,111,109,.16);
       display:flex; align-items:center; justify-content:center;
       flex:0 0 auto;
-      margin-top:1px;
+      margin-top: 1px;
     }
     .check svg{ width:14px; height:14px; }
 
-    /* Testimonials */
-    .quote{
-      display:flex; flex-direction:column; gap:10px;
-      padding: 18px;
+    /* CTA band */
+    .ctaBand{
       border-radius: var(--radius-lg);
-      background: rgba(255,255,255,.88);
-      border:1px solid rgba(231,221,207,.95);
-      box-shadow: var(--shadow-soft);
-      min-height: 160px;
-      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+      border: 1px solid rgba(231,221,207,.95);
+      background:
+        radial-gradient(circle at 12% 18%, rgba(14,111,109,.16), transparent 55%),
+        radial-gradient(circle at 86% 26%, rgba(201,162,78,.18), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.84));
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      flex-wrap:wrap;
     }
-    .quote:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 18px 42px rgba(11,31,42,.12);
-    }
-    .quote p{ margin:0; color: var(--muted); font-size: 15px; }
-    .quote strong{ color: var(--navy); font-weight:950; }
-    .quote .who{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:auto; }
-    .quote .tag{
-      font-weight:950; font-size:12.5px;
-      padding:8px 10px; border-radius:999px;
-      background: rgba(201,162,78,.14);
-      border: 1px solid rgba(201,162,78,.32);
-      color: var(--navy);
-      white-space:nowrap;
-    }
+    .ctaBand h2{ margin:0; font-size: 18px; letter-spacing:-.2px; color: var(--navy); }
+    .ctaBand p{ margin: 6px 0 0; color: var(--muted); font-weight:800; font-size: 14px; }
 
-    /* FAQ */
+    /* FAQ (short) */
     .faq{ display:grid; gap: 10px; }
     details{
       background: rgba(255,255,255,.88);
@@ -503,33 +603,17 @@
       padding: 14px 14px;
       list-style:none;
       display:flex; align-items:center; justify-content:space-between; gap:10px;
-      font-weight:950;
+      font-weight:900;
       color: var(--navy);
     }
     summary::-webkit-details-marker{ display:none; }
-    .faqBody{ padding: 0 14px 14px; color: var(--muted); font-size: 14.5px; }
+    .faqBody{ padding: 0 14px 14px; color: var(--muted); font-size: 14.5px; font-weight: 700; }
     .chev{ width:18px; height:18px; transition: transform .25s var(--ease); }
     details[open] .chev{ transform: rotate(180deg); }
 
-    /* CTA band */
-    .ctaBand{
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(231,221,207,.95);
-      background:
-        radial-gradient(circle at 12% 18%, rgba(14,111,109,.16), transparent 55%),
-        radial-gradient(circle at 86% 26%, rgba(201,162,78,.18), transparent 55%),
-        linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.84));
-      box-shadow: var(--shadow);
-      padding: 18px;
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
-      flex-wrap:wrap;
-    }
-    .ctaBand h3{ margin:0; color: var(--navy); letter-spacing:-.2px; font-weight:950; }
-    .ctaBand p{ margin: 6px 0 0; color: var(--muted); }
-
     /* Footer */
     footer{
-      margin-top: 18px;
+      margin-top: 22px;
       background: linear-gradient(180deg, rgba(11,31,42,.06), rgba(11,31,42,.00));
       border-top: 1px solid rgba(231,221,207,.9);
       padding: 30px 0;
@@ -540,14 +624,15 @@
       gap: 14px;
       align-items:start;
     }
-    .foot h4{ margin:0 0 10px; color: var(--navy); letter-spacing:-.2px; font-weight:950; }
-    .foot p, .foot a{ color: var(--muted); font-size: 14.5px; }
+    .foot h4{ margin:0 0 10px; color: var(--navy); letter-spacing:-.2px; }
+    .foot p, .foot a{ color: var(--muted); font-size: 14.5px; font-weight: 700; }
     .foot a:hover{ color: var(--navy); }
     .foot ul{ list-style:none; padding:0; margin:0; display:grid; gap:8px; }
     .copyright{
       margin-top: 14px;
       color: rgba(71,84,103,.9);
       font-size: 13px;
+      font-weight: 700;
     }
 
     /* Floating WhatsApp */
@@ -568,7 +653,7 @@
       border:1px solid rgba(231,221,207,.95);
       box-shadow: 0 16px 34px rgba(11,31,42,.12);
       color: var(--navy);
-      font-weight:950;
+      font-weight:900;
       font-size: 13px;
       white-space:nowrap;
       transform: translateY(0);
@@ -613,41 +698,34 @@
       transition: opacity .6s var(--ease), transform .6s var(--ease);
       will-change: opacity, transform;
     }
-    .reveal.in{
-      opacity:1;
-      transform: translateY(0);
-    }
+    .reveal.in{ opacity:1; transform: translateY(0); }
 
     /* Responsive */
     @media (max-width: 980px){
       .heroGrid{ grid-template-columns: 1fr; }
-      .footGrid{ grid-template-columns: 1fr; }
+      .tiles{ grid-template-columns: repeat(3, 1fr); }
       .grid3{ grid-template-columns: 1fr; }
-      .split{ grid-template-columns: 1fr; }
+      .footGrid{ grid-template-columns: 1fr; }
     }
-
     @media (max-width: 860px){
       .container{ width: calc(100% - 28px); }
       nav ul{ display:none; }
       .menuBtn{ display:inline-flex; }
-      .heroInner{ padding: 24px 16px 18px; }
-      .sideCard{ padding: 16px; }
-      .logoMark{ width:34px; height:34px; border-radius:12px; }
-      .btn{ padding:10px 12px; }
-    }
-
-    @media (max-width: 520px){
       .brand span{ display:none; }
-      .navRight .btnOutline{ display:none; } /* declutter tiny screens */
-      .heroActions .btn{ width:100%; }      /* tap-friendly buttons */
+      .tiles{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 520px){
+      .heroActions .btn{ width:100%; }
+      .widgetActions .btn{ width:100%; }
       .ctaBand .btn{ width:100%; }
-      .waBubble{ display:none; }            /* keep only icon on very small screens */
+      .waBubble{ display:none; }
+      .grid2{ grid-template-columns: 1fr; }
     }
 
     @media (prefers-reduced-motion: reduce){
       *{ scroll-behavior:auto !important; }
       .reveal{ transition:none; transform:none; opacity:1; }
-      .btn, .waBtn, nav a, .card, .quote, .big, .heroCard, .feat{ transition:none; }
+      .btn, .waBtn, nav a, .card, .tile, .miniCard, .heroImg{ transition:none; }
       .waBtn:after{ animation:none; }
     }
   </style>
@@ -686,10 +764,10 @@
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
+      {"@type":"Question","name":"Do you offer daily or short stays?","acceptedAnswer":{"@type":"Answer","text":"Yes. Daily and short-stay options are available. Share your dates and guest count on WhatsApp for quick availability and rates."}},
       {"@type":"Question","name":"Is Beach View Stays family-friendly?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our apartments are family and tourist friendly with a secure, peaceful environment and serviced support."}},
-      {"@type":"Question","name":"Do you offer daily or short stays?","acceptedAnswer":{"@type":"Answer","text":"Yes. Daily and short-stay options are available. Share your dates on WhatsApp for quick availability."}},
-      {"@type":"Question","name":"Is the beach nearby?","acceptedAnswer":{"@type":"Answer","text":"Yes. We are located in DHA Karachi with convenient access to beach areas and nearby attractions."}},
-      {"@type":"Question","name":"How do I book?","acceptedAnswer":{"@type":"Answer","text":"Message us on WhatsApp with check-in/check-out dates and number of guests. We’ll confirm availability and rates."}}
+      {"@type":"Question","name":"What’s included in the apartment?","acceptedAnswer":{"@type":"Answer","text":"Fully furnished 1-bedroom unit with lounge, kitchen/kitchenette, attached bath, AC, Smart TV, Wi-Fi, linens, 24/7 sweet water, and electric geyser."}},
+      {"@type":"Question","name":"How do I book?","acceptedAnswer":{"@type":"Answer","text":"Message on WhatsApp with check-in, check-out and number of guests. We’ll confirm availability and rates."}}
     ]
   }
   </script>
@@ -700,9 +778,9 @@
   <header>
     <div class="container">
       <div class="nav">
-        <a class="brand" href="/" aria-label="Beach View Stays Home">
+        <a class="brand" href="index.html" aria-label="Beach View Stays Home">
           <div class="logoMark" aria-hidden="true"></div>
-          <div>
+          <div class="brandText">
             <strong>Beach View Stays</strong>
             <span>Relax. Stay. Enjoy the View.</span>
           </div>
@@ -710,7 +788,7 @@
 
         <nav aria-label="Primary navigation">
           <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="facilities.html">Facilities</a></li>
@@ -719,11 +797,11 @@
         </nav>
 
         <div class="navRight">
-          <a class="btn btnOutline" href="contact.html" aria-label="Check availability">Check Availability</a>
           <a class="btn btnWhatsapp" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.5 3.5A11 11 0 0 0 3.7 17.7L3 21l3.4-.7A11 11 0 0 0 20.5 3.5ZM12 20a9 9 0 0 1-4.6-1.3l-.3-.2-2 .4.4-2-.2-.3A9 9 0 1 1 12 20Z"/></svg>
             WhatsApp Booking
           </a>
+
           <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 7h16v2H4zm0 8h16v2H4zm0-4h16v2H4z"/></svg>
           </button>
@@ -732,7 +810,7 @@
 
       <div class="mobilePanel" id="mobilePanel" aria-hidden="true">
         <div class="mobilePanelInner">
-          <a href="/">Home</a>
+          <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="gallery.html">Gallery</a>
           <a href="facilities.html">Facilities</a>
@@ -749,290 +827,265 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
+    <div class="container">
+
+      <!-- HERO (no messy text) -->
+      <section class="reveal" data-delay="0" aria-label="Hero">
         <div class="heroGrid">
-          <div class="heroCard reveal" data-delay="0">
-            <div class="heroInner">
-              <div class="kicker"><span class="dot" aria-hidden="true"></span> Premium Serviced Apartments • DHA Karachi</div>
-              <h1>Relax. Stay. Enjoy the View.</h1>
-              <p class="sub">
-                Premium <strong>1-bedroom</strong> serviced apartments in DHA Karachi — fully furnished, secure, and spotless. Fast booking on WhatsApp.
-              </p>
+
+          <div class="card">
+            <div class="cardInner">
+              <div class="kicker"><span class="dot" aria-hidden="true"></span> DHA Karachi • Near the beach</div>
+              <h1>Premium 1-Bedroom<br/>Serviced Apartments</h1>
+              <p class="sub">Private, clean, fully furnished — built for families, tourists, and calm stays.</p>
 
               <div class="heroActions">
-                <a class="btn btnPrimary" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">
-                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.5 3.5A11 11 0 0 0 3.7 17.7L3 21l3.4-.7A11 11 0 0 0 20.5 3.5ZM12 20a9 9 0 0 1-4.6-1.3l-.3-.2-2 .4.4-2-.2-.3A9 9 0 1 1 12 20Z"/></svg>
+                <a class="btn btnPrimary" href="#availability" aria-label="Check availability">
+                  Check Availability
+                </a>
+                <a class="btn btnOutline" href="gallery.html" aria-label="View gallery">
+                  View Gallery
+                </a>
+                <a class="btn btnWhatsapp" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp booking">
                   Book on WhatsApp
                 </a>
-                <a class="btn btnOutline" href="gallery.html">View Gallery</a>
               </div>
 
-              <div class="heroMeta" aria-label="Quick highlights">
-                <div class="metaPill">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm1 10H7V10h4V6h2v6Z"/></svg>
-                  Daily & short stays
-                </div>
-                <div class="metaPill">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 2 7v6c0 5 3.8 9.4 10 11 6.2-1.6 10-6 10-11V7L12 2Zm0 18c-4.7-1.4-8-5-8-9.1V8.2l8-4 8 4v2.7c0 4.1-3.3 7.7-8 9.1Z"/></svg>
-                  Secure & peaceful
-                </div>
-                <div class="metaPill">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5h13v2H8V5ZM3 6a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm5 11h13v2H8v-2ZM3 18a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm5-7h13v2H8v-2ZM3 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/></svg>
-                  Fully furnished
-                </div>
+              <div class="chips" aria-label="Quick highlights">
+                <span class="chip">Only <b>5</b> units</span>
+                <span class="chip">Daily / Short stays</span>
+                <span class="chip">Secure & peaceful</span>
+                <span class="chip">Hotel-level cleanliness</span>
               </div>
             </div>
           </div>
 
-          <aside class="heroCard sideCard reveal" data-delay="90" aria-label="At a glance">
-            <div class="sideTitle">
-              <h2>At a glance</h2>
-              <span class="badge">Only 5 units</span>
-            </div>
-            <p>Private, calm, and serviced — ideal for families, tourists, and short stays.</p>
+          <div class="reveal" data-delay="80">
+            <div class="heroMedia" aria-label="Apartment preview image">
+              <!-- Replace with your real hero image -->
+              <img class="heroImg" loading="lazy" src="assets/hero.jpg" alt="Beach View Stays apartment interior preview" />
 
-            <div class="featureList">
-              <div class="feat">
-                <div class="i" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 21h10a2 2 0 0 0 2-2V9l-7-6-7 6v10a2 2 0 0 0 2 2Zm4-2v-6h2v6h-2Z"/></svg>
-                </div>
-                <div>
-                  <strong>Home-like space</strong>
-                  <span>Bedroom + lounge + kitchen/kitchenette.</span>
-                </div>
-              </div>
-              <div class="feat">
-                <div class="i" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M6 4h12v2H6V4Zm-2 6h16v10H4V10Zm2 2v6h12v-6H6Z"/></svg>
-                </div>
-                <div>
-                  <strong>Smart essentials</strong>
-                  <span>Wi-Fi, Smart TV, AC, clean linens.</span>
-                </div>
-              </div>
-              <div class="feat">
-                <div class="i" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 2.6 1.4 4.9 3.6 6.1L8 22h8l-.6-6.9A7 7 0 0 0 19 9a7 7 0 0 0-7-7Zm2 18h-4l.4-4h3.2l.4 4Z"/></svg>
-                </div>
-                <div>
-                  <strong>Reliable utilities</strong>
-                  <span>24/7 sweet water + electric geyser.</span>
+              <div class="mediaOverlay" aria-hidden="false">
+                <span class="badge">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 2 7v6c0 5 3.8 9.4 10 11 6.2-1.6 10-6 10-11V7L12 2Z"/></svg>
+                  Verified <b>serviced</b> stays
+                </span>
+
+                <div class="miniPanel">
+                  <span class="miniStat">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm1 10H7V10h4V6h2v6Z"/></svg>
+                    Fast check-in
+                  </span>
+                  <span class="miniStat">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 4h12v2H6V4Zm-2 6h16v10H4V10Zm2 2v6h12v-6H6Z"/></svg>
+                    Smart TV
+                  </span>
                 </div>
               </div>
             </div>
 
-            <div style="margin-top: 6px;">
-              <a class="btn btnPrimary" style="width:100%;" href="contact.html">Check availability</a>
+            <!-- Availability Widget -->
+            <div id="availability" class="widget reveal" data-delay="140" style="margin-top:12px;">
+              <div class="widgetTop">
+                <strong>Check availability (WhatsApp)</strong>
+                <span class="pill">Instant reply</span>
+              </div>
+              <div class="widgetBody">
+                <form id="waForm" autocomplete="on">
+                  <div class="grid2">
+                    <div>
+                      <label for="checkin">Check-in</label>
+                      <input id="checkin" name="checkin" type="date" required />
+                    </div>
+                    <div>
+                      <label for="checkout">Check-out</label>
+                      <input id="checkout" name="checkout" type="date" required />
+                    </div>
+                  </div>
+
+                  <div class="grid2" style="margin-top:10px;">
+                    <div>
+                      <label for="guests">Guests</label>
+                      <select id="guests" name="guests">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="notes">Note (optional)</label>
+                      <input id="notes" name="notes" type="text" placeholder="Family / couple / work trip" maxlength="60" />
+                    </div>
+                  </div>
+
+                  <div class="widgetActions">
+                    <button class="btn btnPrimary" type="submit">Send on WhatsApp</button>
+                    <a class="btn btnOutline" href="contact.html">Contact</a>
+                  </div>
+
+                  <div class="note">Tip: dates + guests = fastest confirmation.</div>
+                </form>
+              </div>
             </div>
-          </aside>
+
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- WHY -->
-    <section>
-      <div class="container">
-        <div class="sectionHead reveal" data-delay="0">
+      <!-- ESSENTIALS (tiles, no paragraphs) -->
+      <section class="reveal" data-delay="0" aria-label="Essentials">
+        <div class="sectionHead">
           <div>
-            <h2>Why guests choose Beach View Stays</h2>
-            <p>Clean. Calm. Convenient. Everything guests care about.</p>
+            <h2>Essentials that matter</h2>
+            <p>Comfort + reliability — without extra noise.</p>
+          </div>
+        </div>
+
+        <div class="tiles">
+          <div class="tile">
+            <div class="i" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 6h16v12H4zM6 8v8h12V8H6z"/></svg></div>
+            <strong>High-speed Wi-Fi</strong>
+          </div>
+          <div class="tile">
+            <div class="i" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 21h10a2 2 0 0 0 2-2V9l-7-6-7 6v10a2 2 0 0 0 2 2Zm4-2v-6h2v6h-2Z"/></svg></div>
+            <strong>1-Bedroom units</strong>
+          </div>
+          <div class="tile">
+            <div class="i" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M6 4h12v2H6V4Zm-2 6h16v10H4V10Zm2 2v6h12v-6H6Z"/></svg></div>
+            <strong>Smart TV</strong>
+          </div>
+          <div class="tile">
+            <div class="i" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 2.6 1.4 4.9 3.6 6.1L8 22h8l-.6-6.9A7 7 0 0 0 19 9a7 7 0 0 0-7-7Z"/></svg></div>
+            <strong>Electric geyser</strong>
+          </div>
+          <div class="tile">
+            <div class="i" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 2 7v6c0 5 3.8 9.4 10 11 6.2-1.6 10-6 10-11V7L12 2Z"/></svg></div>
+            <strong>Secure & calm</strong>
+          </div>
+          <div class="tile">
+            <div class="i" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 18h16v2H4v-2Zm2-4 4-10h6l4 10H6Zm3.1-2h7.8l-2.4-6h-3L9.1 12Z"/></svg></div>
+            <strong>Near the beach</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY (3 cards, bullets only) -->
+      <section class="reveal" data-delay="0" aria-label="Why choose us">
+        <div class="sectionHead">
+          <div>
+            <h2>Why guests choose us</h2>
+            <p>Simple promise: private + clean + responsive support.</p>
           </div>
         </div>
 
         <div class="grid3">
-          <div class="card reveal" data-delay="0">
-            <div class="cardPad">
-              <h3>Comfort that feels like home</h3>
-              <p>Private 1-bedroom apartments with lounge and kitchen space—ideal for families and longer stays.</p>
-              <div class="pillRow">
-                <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 21h10a2 2 0 0 0 2-2V9l-7-6-7 6v10a2 2 0 0 0 2 2Z"/></svg> 1-bedroom units</span>
-                <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 6h16v12H4z"/></svg> Lounge area</span>
-              </div>
+          <div class="miniCard">
+            <div class="miniCardTop">
+              <span class="cap">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 21h10a2 2 0 0 0 2-2V9l-7-6-7 6v10a2 2 0 0 0 2 2Z"/></svg>
+                Home-like space
+              </span>
             </div>
-          </div>
-
-          <div class="card reveal" data-delay="90">
-            <div class="cardPad">
-              <h3>Hotel-level cleanliness</h3>
-              <p>Housekeeping support and consistently clean spaces—so the stay feels premium, every time.</p>
-              <div class="pillRow">
-                <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16 2H8v2H5v2h14V4h-3V2Zm-9 8h10v10H7V10Zm2 2v6h6v-6H9Z"/></svg> Hygienic rooms</span>
-                <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 2 7v6c0 5 3.8 9.4 10 11 6.2-1.6 10-6 10-11V7L12 2Z"/></svg> Safe & secure</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card reveal" data-delay="180">
-            <div class="cardPad">
-              <h3>DHA + beach convenience</h3>
-              <p>Located in DHA Karachi with easy access to beach areas, Clifton routes, restaurants, and key city spots.</p>
-              <div class="pillRow">
-                <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 18h18v2H3v-2Zm2-4 4-10h6l4 10H5Zm3.1-2h7.8l-2.4-6H10.5l-2.4 6Z"/></svg> Near beach</span>
-                <span class="softPill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg> DHA Karachi</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- WHAT'S INCLUDED -->
-    <section>
-      <div class="container">
-        <div class="split">
-          <div class="big reveal" data-delay="0">
-            <h3>Everything you need for a relaxed stay</h3>
-            <p>Strong internet, comfort-first interiors, and reliable utilities—so your stay stays smooth.</p>
-            <ul class="bullets" aria-label="Included features">
-              <li>
-                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
-                <div><strong>High-speed Wi-Fi + Smart TV</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Work, stream, and stay connected.</div></div>
-              </li>
-              <li>
-                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
-                <div><strong>Kitchen / kitchenette</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Simple meals, easy routine.</div></div>
-              </li>
-              <li>
-                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
-                <div><strong>24/7 sweet water + electric geyser</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Reliable water and hot showers.</div></div>
-              </li>
+            <h3>Room to breathe</h3>
+            <ul class="miniBullets">
+              <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>Bedroom + lounge</li>
+              <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>Kitchen / kitchenette</li>
+              <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>Attached bath</li>
             </ul>
           </div>
 
-          <div class="big reveal" data-delay="120">
-            <h3>Built for families, tourists & calm stays</h3>
-            <p>Best for guests who value privacy, hygiene, and a peaceful atmosphere. WhatsApp is the fastest route for availability and rates.</p>
-
-            <ul class="bullets" aria-label="Good for">
-              <li>
-                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
-                <div><strong>Families & overseas guests</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Home-like comfort with serviced support.</div></div>
-              </li>
-              <li>
-                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
-                <div><strong>Daily & short stays</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Simple flow, quick confirmations.</div></div>
-              </li>
-              <li>
-                <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>
-                <div><strong>Peaceful environment</strong><div style="color:var(--muted); font-size:14px; margin-top:2px;">Secure, calm, and maintained.</div></div>
-              </li>
+          <div class="miniCard">
+            <div class="miniCardTop">
+              <span class="cap">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 2 7v6c0 5 3.8 9.4 10 11 6.2-1.6 10-6 10-11V7L12 2Z"/></svg>
+                Clean & safe
+              </span>
+            </div>
+            <h3>Service standards</h3>
+            <ul class="miniBullets">
+              <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>Housekeeping support</li>
+              <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>Fresh linens & hygiene</li>
+              <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>Peaceful environment</li>
             </ul>
+          </div>
 
-            <div style="margin-top: 12px;">
-              <a class="btn btnWhatsapp" style="width:100%;" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">
-                Ask availability on WhatsApp
-              </a>
-              <div style="margin-top:10px; color:var(--muted); font-size:13.5px;">
-                Tip: Send <strong>dates</strong> + <strong>number of guests</strong> for the fastest reply.
-              </div>
+          <div class="miniCard">
+            <div class="miniCardTop">
+              <span class="cap">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg>
+                DHA Karachi
+              </span>
             </div>
+            <h3>Easy location</h3>
+            <ul class="miniBullets">
+              <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>Near beach areas</li>
+              <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>Clifton/DHA access</li>
+              <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8.6-8.6 1.4 1.4-10 10Z"/></svg></span>WhatsApp-first support</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- TESTIMONIALS -->
-    <section>
-      <div class="container">
-        <div class="sectionHead reveal" data-delay="0">
+      <!-- CTA (short) -->
+      <section class="reveal" data-delay="0" aria-label="Call to action">
+        <div class="ctaBand">
           <div>
-            <h2>Guest-first experience</h2>
-            <p>Clean apartments, reliable support, and a calm stay near the beach—simple, consistent, premium.</p>
-          </div>
-        </div>
-
-        <div class="grid3">
-          <div class="quote reveal" data-delay="0">
-            <p>“Private and peaceful. Clean rooms, smooth check-in, and everything worked.”</p>
-            <div class="who">
-              <strong>Family Guest</strong>
-              <span class="tag">Clean & calm</span>
-            </div>
-          </div>
-          <div class="quote reveal" data-delay="90">
-            <p>“Good Wi-Fi and comfortable space. Great if you don’t want a crowded hotel environment.”</p>
-            <div class="who">
-              <strong>Short-stay Traveler</strong>
-              <span class="tag">Wi-Fi ready</span>
-            </div>
-          </div>
-          <div class="quote reveal" data-delay="180">
-            <p>“Convenient for DHA and beach areas. Support was quick on WhatsApp.”</p>
-            <div class="who">
-              <strong>Tourist</strong>
-              <span class="tag">Fast support</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- TODO: Replace placeholders with real guest reviews. Do not invent ratings. -->
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section>
-      <div class="container">
-        <div class="sectionHead reveal" data-delay="0">
-          <div>
-            <h2>FAQs</h2>
-            <p>Clear answers, no fluff—so guests can book confidently.</p>
-          </div>
-        </div>
-
-        <div class="faq">
-          <details class="reveal" data-delay="0">
-            <summary>
-              Is Beach View Stays family-friendly?
-              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
-            </summary>
-            <div class="faqBody">Yes. Our apartments are family and tourist friendly with a secure, peaceful environment and serviced support.</div>
-          </details>
-
-          <details class="reveal" data-delay="90">
-            <summary>
-              Do you offer daily or short stays?
-              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
-            </summary>
-            <div class="faqBody">Yes. Daily and short-stay options are available. Share your dates on WhatsApp for quick availability and rates.</div>
-          </details>
-
-          <details class="reveal" data-delay="180">
-            <summary>
-              What’s included in the apartments?
-              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
-            </summary>
-            <div class="faqBody">Fully furnished 1-bedroom units with AC, lounge area, kitchen/kitchenette, attached bath, Smart TV, Wi-Fi, linens, 24/7 sweet water, and an electric geyser.</div>
-          </details>
-
-          <details class="reveal" data-delay="270">
-            <summary>
-              How do I book?
-              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
-            </summary>
-            <div class="faqBody">WhatsApp us with check-in/check-out dates and number of guests. We’ll confirm availability, rates, and booking steps quickly.</div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA BAND -->
-    <section>
-      <div class="container">
-        <div class="ctaBand reveal" data-delay="0">
-          <div>
-            <h3>Instant booking & availability</h3>
-            <p>Send your dates on WhatsApp — we’ll confirm availability and rates fast.</p>
+            <h2>Get rates for your dates</h2>
+            <p>Send check-in, check-out, and guests — we’ll confirm availability fast.</p>
           </div>
           <div style="display:flex; gap:10px; flex-wrap:wrap;">
             <a class="btn btnPrimary" href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">Book on WhatsApp</a>
             <a class="btn btnOutline" href="contact.html">Contact</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- FAQ (minimal) -->
+      <section class="reveal" data-delay="0" aria-label="FAQs">
+        <div class="sectionHead">
+          <div>
+            <h2>FAQs</h2>
+            <p>Clear answers. Quick booking.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>
+              Do you offer daily or short stays?
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
+            </summary>
+            <div class="faqBody">Yes. Share your dates on WhatsApp — we’ll confirm availability and rates.</div>
+          </details>
+
+          <details>
+            <summary>
+              Is it family-friendly?
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
+            </summary>
+            <div class="faqBody">Yes. Designed for families and tourists — secure, calm, and serviced.</div>
+          </details>
+
+          <details>
+            <summary>
+              What’s included?
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
+            </summary>
+            <div class="faqBody">Fully furnished unit with Wi-Fi, Smart TV, AC, lounge, kitchen/kitchenette, attached bath, sweet water, and electric geyser.</div>
+          </details>
+
+          <details>
+            <summary>
+              How do I book?
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4 5.6 5.6 5.6-5.6L19 8.5z"/></svg>
+            </summary>
+            <div class="faqBody">Message on WhatsApp with dates + guests. We’ll guide the rest.</div>
+          </details>
+        </div>
+      </section>
+
+    </div>
   </main>
 
   <!-- Footer -->
@@ -1041,7 +1094,7 @@
       <div class="footGrid">
         <div class="foot">
           <h4>Beach View Stays</h4>
-          <p>Premium serviced 1-bedroom apartments near the beach in DHA Karachi—comfort, privacy, and hotel-level cleanliness.</p>
+          <p>Premium serviced 1-bedroom apartments near the beach in DHA Karachi — private, clean, and calm.</p>
           <p style="margin-top:10px;">
             <strong style="color:var(--navy);">Email:</strong> <a href="mailto:karachi.apartments@gmail.com">karachi.apartments@gmail.com</a><br/>
             <strong style="color:var(--navy);">WhatsApp:</strong> <a href="https://wa.me/923068230101" target="_blank" rel="noopener noreferrer">+92 306 8230101</a>
@@ -1051,7 +1104,7 @@
         <div class="foot">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="facilities.html">Facilities</a></li>
@@ -1097,16 +1150,13 @@
       // Mobile menu
       const btn = document.getElementById('menuBtn');
       const panel = document.getElementById('mobilePanel');
-
       if(btn && panel){
+        panel.classList.remove('open');
         const close = () => {
           btn.setAttribute('aria-expanded','false');
           panel.classList.remove('open');
           panel.setAttribute('aria-hidden','true');
         };
-
-        close();
-
         btn.addEventListener('click', () => {
           const open = panel.classList.contains('open');
           if(open) close();
@@ -1116,19 +1166,15 @@
             panel.setAttribute('aria-hidden','false');
           }
         });
-
         document.addEventListener('click', (e) => {
           if(!panel.classList.contains('open')) return;
           const within = panel.contains(e.target) || btn.contains(e.target);
           if(!within) close();
         });
-
-        window.addEventListener('resize', () => {
-          if(window.innerWidth > 860) close();
-        });
+        window.addEventListener('resize', () => { if(window.innerWidth > 860) close(); });
       }
 
-      // Scroll reveal
+      // Reveal
       const els = Array.from(document.querySelectorAll('.reveal'));
       if(reduce){
         els.forEach(el => el.classList.add('in'));
@@ -1137,7 +1183,6 @@
           const d = el.getAttribute('data-delay');
           if(d) el.style.transitionDelay = (parseInt(d,10) || 0) + 'ms';
         });
-
         const io = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if(entry.isIntersecting){
@@ -1146,8 +1191,56 @@
             }
           });
         }, { threshold: 0.12 });
-
         els.forEach(el => io.observe(el));
+      }
+
+      // Hero image fallback if assets/hero.jpg missing
+      const heroImg = document.querySelector('.heroImg');
+      const placeholder = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(
+        `<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0B1F2A" stop-opacity="0.22"/>
+              <stop offset="1" stop-color="#C9A24E" stop-opacity="0.18"/>
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#g)"/>
+          <text x="50%" y="48%" dominant-baseline="middle" text-anchor="middle"
+            font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="34" fill="#0B1F2A" opacity="0.65">
+            Add your hero photo: assets/hero.jpg
+          </text>
+          <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle"
+            font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="18" fill="#0B1F2A" opacity="0.55">
+            Bright interior / clean bedding / lounge view works best
+          </text>
+        </svg>`
+      );
+      if(heroImg){
+        heroImg.addEventListener('error', ()=>{ heroImg.src = placeholder; }, { once:true });
+      }
+
+      // Availability → WhatsApp prefilled message
+      const form = document.getElementById('waForm');
+      if(form){
+        form.addEventListener('submit', (e)=>{
+          e.preventDefault();
+          const checkin = document.getElementById('checkin').value;
+          const checkout = document.getElementById('checkout').value;
+          const guests = document.getElementById('guests').value;
+          const notes = document.getElementById('notes').value.trim();
+
+          const msg =
+            `Hello Beach View Stays,%0A` +
+            `I want to check availability:%0A` +
+            `• Check-in: ${checkin}%0A` +
+            `• Check-out: ${checkout}%0A` +
+            `• Guests: ${guests}%0A` +
+            (notes ? `• Note: ${encodeURIComponent(notes)}%0A` : ``) +
+            `%0APlease share rates and booking steps.`;
+
+          const url = `https://wa.me/923068230101?text=${msg}`;
+          window.open(url, '_blank', 'noopener,noreferrer');
+        });
       }
     })();
   </script>
